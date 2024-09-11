@@ -128,7 +128,6 @@ h3 {
 
 .modal-content {
     background: #F5F5F5;
-    /* Slightly lighter background */
     padding: 20px;
     border-radius: 8px;
     position: relative;
@@ -149,5 +148,5 @@ h3 {
     cursor: pointer;
     font-size: 24px;
     color: #8A0917;
-    /* Red */
+
 }
