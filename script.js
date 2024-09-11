@@ -9,9 +9,9 @@ function toggleCode(id) {
 
 function toggletxt(id) {
     const btn = document.getElementById(id);
-    if (btn.innerHTML.trim() === "See Code") { 
+    if (btn.innerHTML.trim() === "See Code") {
         btn.innerHTML = "Hide Code";
-    } 
+    }
     else {
         btn.innerHTML = "See Code";
     }
@@ -19,9 +19,9 @@ function toggletxt(id) {
 
 function toggleoutput(id) {
     const btn = document.getElementById(id);
-    if (btn.innerHTML.trim() === "See Output") { 
+    if (btn.innerHTML.trim() === "See Output") {
         btn.innerHTML = "Hide Output";
-    } 
+    }
     else {
         btn.innerHTML = "See Output";
     }
