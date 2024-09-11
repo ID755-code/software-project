@@ -7,7 +7,7 @@ function toggleCode(id) {
     }
 }
 
-function togglecode(id) {
+function toggletxt(id) {
     const btn = document.getElementById(id);
     if (btn.innerHTML.trim() === "See Code") { 
         btn.innerHTML = "Hide Code";
