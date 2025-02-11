@@ -1,0 +1,32 @@
+{
+    "collections": [
+        {
+            "name": "File Handling",
+            "snippets": [
+                {
+                    "title": "Write a C program to write a character and display it using fgetc() and fputc() functions.",
+                    "code": "#include<stdio.h>\nint main(){\n    FILE *fp;\n    char ch, c;\n    fp = fopen(\"./filechar.txt\", \"w+\");\n    printf(\"Enter a character: \");\n    scanf(\"%s\", &ch);\n    fputc(ch, fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    c = fgetc(fp);\n    printf(\"The entered character is %c\", c);\n    printf(\"\\nProgram executed by darshan subedi XII 746\");\n}",
+                    "outputImage": "./assets/filehandling_ii/1_output.PNG",
+                    "fileImage": "./assets/filehandling_ii/1_file.PNG"
+                },
+                {
+                    "title": "Write a C program to write a number and display it using getw() and putw() functions.",
+                    "code": "#include<stdio.h>\n\nint main(){\n    FILE *fp;\n    int n,n1;\n    fp = fopen(\"./fileint.txt\",\"w+\");\n    printf(\"Enter a number: \");\n    scanf(\"%d\",&n);\n    putw(n,fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    n1 = getw(fp);\n    printf(\"The entered number is %d\\n\",n1);\n    printf(\"Program executed by darshan subedi XII 746\");\n}",
+                    "outputImage": "./assets/filehandling_ii/2_output.PNG",
+                    "fileImage": "./assets/filehandling_ii/2_file.PNG"
+                }
+            ]
+        },
+        {
+            "name": "Dynamic Memory Allocation",
+            "snippets": [
+                {
+                    "title": "Write a C program to demonstrate the use of malloc() and free().",
+                    "code": "#include<stdio.h>\n#include<stdlib.h>\n\nint main(){\n    int *ptr;\n    ptr = (int*)malloc(5 * sizeof(int));\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        return 1;\n    }\n    for (int i = 0; i < 5; i++) {\n        ptr[i] = i + 1;\n    }\n    printf(\"Stored values: \");\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", ptr[i]);\n    }\n    free(ptr);\n    return 0;\n}",
+                    "outputImage": "./assets/malloc_output.PNG",
+                    "fileImage": "./assets/malloc_file.PNG"
+                }
+            ]
+        }
+    ]
+}
