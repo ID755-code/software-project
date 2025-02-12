@@ -14,6 +14,11 @@
                     "code": "#include<stdio.h>\n\nint main(){\n    FILE *fp;\n    int n,n1;\n    fp = fopen(\"./fileint.txt\",\"w+\");\n    printf(\"Enter a number: \");\n    scanf(\"%d\",&n);\n    putw(n,fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    n1 = getw(fp);\n    printf(\"The entered number is %d\\n\",n1);\n    printf(\"Program executed by darshan subedi XII 746\");\n}",
                     "outputImage": "./assets/filehandling_ii/2_output.PNG",
                     "fileImage": "./assets/filehandling_ii/2_file.PNG"
+                },{
+                    "title":"Write a C program to append content to an existing file. Dikshyanta Karki (749)",
+                    "code": "#include <stdio.h>\n\n\nint main() {\n FILE *file; char content[] =\"This is the appended content.\"; \nfile = fopen(\"existing.txt\", \"a\"); \nif (file == NULL) {\n printf(\"Error opening file for appending.\");\n  }\n fprintf(file, \"%s\", content); fclose(file);\n return 0;\n }",
+                    "outputImage": "./assets/filehandling_ii/49_output.png",
+                    "fileImage": "./assets/filehandling_ii/49_output2.png"
                 }
 
             ]
@@ -30,8 +35,9 @@
             ]
         },
         {
-            "name":"C programmin",
-            "snippets":[
+
+            "name": "C programming",
+            "snippets": [
                 {
                     "title":"",
                     "code":"",
@@ -39,7 +45,7 @@
                     "fileImage":""
                 },
                 {
-                    "title": "What is union? Explain the differences between structure and union.",
+                    "title": "What is union? Explain the differences between structure and union. (Baibhav Dhital)",
                     "code": "Please Find Attachment",
                     "outputImage": "./assets/filehandling_ii/bob1_output.PNG",
                     "fileImage": ""
@@ -48,3 +54,18 @@
         }
     ]
 }
+                    "title": "What is the difference between the = symbol and == symbol? What is the modulus operator? (By- Aadarsha Kafle 703)",
+                    "code": "1. = (Assignment Operator):\n\n   a. The = symbol in C is known as the assignment operator. It is used to assign a value to a variable.\n\n   b. When you use =, you are telling the program to store the value on the right-hand side of the operator into the variable on the left-hand side.\n\n   c. This operator is essential for assigning values to variables during the program's execution.\n\n2. == (Equality Comparison Operator):\n\n   a. The == symbol in C is known as the equality comparison operator. It is used to compare two values to check if they are equal.\n\n   b. The == operator evaluates to true (1) if the values on both sides are equal and false (0) if they are not equal.\n\n   c. This operator is commonly used in conditional statements, such as if conditions, to check whether two values are identical.\n\nThe modulus operator (%) in C is used to find the remainder of a division operation. It divides the number on the left-hand side by the number on the right-hand side and returns the remainder. This operator is useful for tasks like checking if a number is even or odd. For example, x % 2 == 0 checks if x is even. It is commonly used in loops and conditions for cyclic operations.",
+                    "outputImage": "",
+                    "fileImage": ""
+        },
+        {
+                    "title":"Write a program to read and write from a file using getw() and putw() function. (Pratik GC)",
+                    "code":"#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
+                    "outpuImage":"./assets/image7.PNG",
+                    "fileImage":""
+
+                },
+              ]
+  
+
