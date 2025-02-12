@@ -10,6 +10,14 @@
           "fileImage": ""
         },
         {
+            "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
+            "code": "This question doesnot require code to be written. View the output!",
+            "outputImage": "./assets/filehandling_ii/answer.PNG",
+            "fileImage": "./assets/filehandling_ii/answer.PNG"
+            
+        },
+        {
+   
           "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
           "code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}",
           "outputImage": "./assets/53.png",
@@ -36,4 +44,5 @@
       ]
     }
   ]
+
 }
