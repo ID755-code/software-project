@@ -53,8 +53,8 @@ int recursivefibonacci(int x){
     else return (recursivefibonacci(x - 1) + recursivefibonacci(x - 2));
 }
 ",
-                    "outpuImage":"",
-                    "fileImage":"",
+                    "outpuImage":"./assets/filehandling_ii/fibo_output.png",
+                    "fileImage":"./assets/filehandling_ii/fibo_output.png",
                 }
             ]
         }
