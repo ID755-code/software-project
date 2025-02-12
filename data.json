@@ -33,10 +33,8 @@
             "snippets":[
                 {
                     "title":"What is recursion in c? Write a program to find the factorial of a number using recursion.",
-                    "code":" {
-  "program": "#include <stdio.h>\nint factorial(int a);\nint main(){\n    int x;\n    printf(\"Enter the value of N: \");\n    scanf(\"%d\",&x);\n    int result = factorial(x);\n    printf(\"%d\",result);\n    return 0;\n}\n\nint factorial(int a){\n    if(a==1 || a==0){\n        return 1;\n    }\n    else{\n        return (a * factorial(a-1));\n    }\n}"
-}
-
+                    "code":" 
+  "#include <stdio.h>\nint factorial(int a);\nint main(){\n    int x;\n    printf(\"Enter the value of N: \");\n    scanf(\"%d\",&x);\n    int result = factorial(x);\n    printf(\"%d\",result);\n    return 0;\n}\n\nint factorial(int a){\n    if(a==1 || a==0){\n        return 1;\n    }\n    else{\n        return (a * factorial(a-1));\n    }\n}"
 ",
                     "outputImage":"./assets/factorial-output.png",
                     "fileImage":""
