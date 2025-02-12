@@ -32,9 +32,9 @@
             "name":"C programming",
             "snippets":[
                 {
-                    "title":"Write a program to read and write from a file using getw() and putw() function.",
+                    "title":"Write a program to read and write from a file using getw() and putw() function. (Pratik GC)",
                     "code":"#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
-                    "outpuImage":"./assets/image7.png",
+                    "outpuImage":"./assets/image7.PNG",
                     "fileImage":""
                 }
             ]
