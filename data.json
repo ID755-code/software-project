@@ -36,8 +36,8 @@
                     "code": "#include <stdio.h>\n\nconst char* check_prime_or_composite(int number) {\n    if (number <= 1) {\n        return \"Neither prime nor composite\";\n    }\n    for (int i = 2; i * i <= number; i++) {\n        if (number % i == 0) {\n            return \"Composite\";\n        }\n    }\n    return \"Prime\";\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    printf(\"The number %d is %s.\\n\", number, check_prime_or_composite(number));\n    return 0;\n}"
 }
 ",
-                    "outpuImage":"",
-                    "fileImage":"",
+                    "outputImage":"./assets/hari.png",
+
                 }
             ]
         }
