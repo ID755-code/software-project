@@ -32,8 +32,11 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
+                    "title":"What are variables and in what way is it different from constants? How do you access the values within an array?",
+                    "code":"{
+  "program": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n    while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\\n\", num);\n    }\n    return 0;\n}"
+}
+",
                     "outpuImage":"",
                     "fileImage":""
                 }
