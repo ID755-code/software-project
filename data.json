@@ -30,17 +30,14 @@
         },
   {
             "name": "C Programming",
-            "snippets": [
-                {
-                    "title": "What is debugging? What does the && operator do in a program code?",
-                    "Answer": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.
-As for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false.",
-                    "outputImage": "./assets/filehandling_ii/1_output.PNG",
-                    "fileImage": "./assets/filehandling_ii/1_file.PNG"
-                }
-            ]
-        }
-        
-        
+  "snippets": [
+    {
+      "title": "What is debugging? What does the && operator do in a program code?",
+      "Answer": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false.",
+      "outputImage": "./assets/filehandling_ii/Example.PNG",
+      "fileImage": "./assets/filehandling_ii/Example.PNG"
+    }
+  ]
+}     
     ]
 }
