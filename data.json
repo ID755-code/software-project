@@ -1,6 +1,5 @@
-
-{  
-"collections": [  
+{
+  "collections": [
     {
       "name": "C programming",
       "snippets": [
@@ -11,11 +10,10 @@
           "fileImage": ""
         },
         {
-            "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
-            "code": "This question doesnot require code to be written. View the output!",
-            "outputImage": "./assets/filehandling_ii/answer.PNG",
-            "fileImage": "./assets/filehandling_ii/answer.PNG"
-            
+          "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
+          "code": "This question does not require code to be written. View the output!",
+          "outputImage": "./assets/filehandling_ii/answer.PNG",
+          "fileImage": "./assets/filehandling_ii/answer.PNG"
         },
         {
           "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
@@ -41,48 +39,44 @@
           "outputImage": "",
           "fileImage": ""
         },
-         {
+        {
           "title": "What is debugging? What does the && operator do in a program code? (Aarshu shakya)",
-          "code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The exampe of its code is given below.",
+          "code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The example of its code is given below.",
           "outputImage": "./assets/filehandling_ii/Example.png",
-           "fileImage": ""
+          "fileImage": ""
         },
-    
         {
-            "title": "What are compound statements? What is the advantage of an array over individual variables?",
-            "code": "A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.\n\nExample:\n\nif (condition) {\n    // This is a compound statement\n    statement1();\n    statement2();\n}\n\nAdvantages of Arrays Over Individual Variables in C:\n1. Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.\n2. Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.\n\n   int arr[5] = {1, 2, 3, 4, 5};\n   int value = arr[2]; // Accessing the third element\n3. Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.\n\n   for (int i = 0; i < 5; i++) {\n       printf(\"%d \", arr[i]); // Print all elements\n   }\n4. Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.\n5. Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.\n\n   int *arr = malloc(size * sizeof(int)); // Dynamic array allocation\n6. Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.\n\nThese characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
-            "exampleCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d:\\n\", i);\n        // Compound statement\n        {\n            int square = i * i;\n            printf(\"Square of %d is %d\\n\", i, square);\n        }\n    }\n    return 0;\n}",
-            "outputImage": "./assets/ss066.png",
-            "fileImage": "./assets/ss06.png"
+          "title": "What are compound statements? What is the advantage of an array over individual variables?",
+          "code": "A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.\n\nExample:\n\nif (condition) {\n    // This is a compound statement\n    statement1();\n    statement2();\n}\n\nAdvantages of Arrays Over Individual Variables in C:\n1. Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.\n2. Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.\n\n   int arr[5] = {1, 2, 3, 4, 5};\n   int value = arr[2]; // Accessing the third element\n3. Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.\n\n   for (int i = 0; i < 5; i++) {\n       printf(\"%d \", arr[i]); // Print all elements\n   }\n4. Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.\n5. Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.\n\n   int *arr = malloc(size * sizeof(int)); // Dynamic array allocation\n6. Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.\n\nThese characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
+          "exampleCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d:\\n\", i);\n        // Compound statement\n        {\n            int square = i * i;\n            printf(\"Square of %d is %d\\n\", i, square);\n        }\n    }\n    return 0;\n}",
+          "outputImage": "./assets/ss066.png",
+          "fileImage": "./assets/ss06.png"
         },
-
         {
-          "title":"Write a program using user-defined function to check whether the given year is leap year or not. (Aman Kumar Yadav)",
-             "code":"assets/filehandling_ii/Aman-22_C.png",
-             "outputImage":"assets/filehandling_ii/Aman-22_Output.png",
-             "fileImage" : ""
-
-          },
-          {
-           "title": "Write a program using user-defined function to check whether the given number is Armstrong or not.",
-            "code": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n     while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\\n\", num);\n    }\n    return 0;\n}\n",
-            "outputImage": "./assets/filehandling_ii/3_output.PNG"
-          },
-          {
-           "title":"Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
-           "code":"#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \\n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
-            "outpuImage":"./assets/filehandling_ii/question15.PNG",
-            "fileImage":""
-           },
-           {
-              "title": "What is union? Explain the differences between structure and union. (Baibhav Dhital)",
-               "code": "Please Find Attachment",
-               "outputImage": "./assets/filehandling_ii/bob1_output.PNG",
-                "fileImage": ""
-            }      
-        
+          "title": "Write a program using user-defined function to check whether the given year is leap year or not. (Aman Kumar Yadav)",
+          "code": "assets/filehandling_ii/Aman-22_C.png",
+          "outputImage": "assets/filehandling_ii/Aman-22_Output.png",
+          "fileImage": ""
+        },
+        {
+          "title": "Write a program using user-defined function to check whether the given number is Armstrong or not.",
+          "code": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n     while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\\n\", num);\n    }\n    return 0;\n}\n",
+          "outputImage": "./assets/filehandling_ii/3_output.PNG",
+          "fileImage": ""
+        },
+        {
+          "title": "Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
+          "code": "#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \\n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
+          "outputImage": "./assets/filehandling_ii/question15.PNG",
+          "fileImage": ""
+        },
+        {
+          "title": "What is union? Explain the differences between structure and union. (Baibhav Dhital)",
+          "code": "Please Find Attachment",
+          "outputImage": "./assets/filehandling_ii/bob1_output.PNG",
+          "fileImage": ""
+        }
       ]
     }
   ]
-
-
+}
