@@ -20,8 +20,6 @@
           "code": "#include <stdio.h>\n\n\nint main() {\n FILE *file; char content[] =\"This is the appended content.\"; \nfile = fopen(\"existing.txt\", \"a\"); \nif (file == NULL) {\n printf(\"Error opening file for appending.\");\n  }\n fprintf(file, \"%s\", content); fclose(file);\n return 0;\n }",
           "outputImage": "./assets/filehandling_ii/49_output.png",
           "fileImage": "./assets/filehandling_ii/49_output2.png"
-        }
-      ]
     },
     {
       "name": "Dynamic Memory Allocation",
@@ -48,7 +46,14 @@
           "code": "#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
           "outputImage": "./assets/image7.PNG",
           "fileImage": ""
-        }
+        },
+        {
+                    "title":"Write a C program to calculate the sum of n natural numbers.",
+                    "subtitle":"Done by Ambu Shree Poudel (723)",
+                    "code":"//Write a program using user-defined function to find the sum of N natural numbers.\n//DONE BY AMBU SHREE POUDEL (723)\n#include <stdio.h>\n\nint main() {\n    int n, sum;\n\n    // Input the value of n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    sum = n * (n + 1) / 2;\n\n    printf(\"Sum of first %d natural numbers is: %d\\n\", n, sum);\n\n    return 0;\n}",
+                    "outputImage":"./assets/filehandling_ii/sumof n natural number.png",
+                    "fileImage":""
+                }
       ]
     }
   ]
