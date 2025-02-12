@@ -1,4 +1,5 @@
-  "collections": [  
+{  
+"collections": [  
     {
       "name": "C programming",
       "snippets": [
@@ -16,7 +17,6 @@
             
         },
         {
-   
           "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
           "code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}",
           "outputImage": "./assets/53.png",
@@ -43,8 +43,15 @@
          {
           "title": "What is debugging? What does the && operator do in a program code? (Aarshu shakya)",
           "code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The exampe of its code is given below.",
-          "outputImage": "./assets/filehandling_ii/Example.png"
-        }
+          "outputImage": "./assets/filehandling_ii/Example.png",
+           "fileImage": ""
+        },
+        {
+                    "title":"Write a program using user-defined function to check whether the given year is leap year or not. (Aman Kumar Yadav)",
+                    "code":"assets/filehandling_ii/Aman-22_C.png",
+                    "outpuImage":"assets/filehandling_ii/Aman-22_Output.png",
+                    "fileImage" : ""
+                }
       ]
     }
   ]
