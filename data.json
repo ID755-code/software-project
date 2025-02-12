@@ -32,7 +32,7 @@
             "name": "C programming",
             "snippets": [
                 {
-                    "title": "What is the difference between the = symbol and == symbol? What is the modulus operator?",
+                    "title": "What is the difference between the = symbol and == symbol? What is the modulus operator? (By- Aadarsha Kafle 703)",
                     "code": "1. = (Assignment Operator):\n\n   a. The = symbol in C is known as the assignment operator. It is used to assign a value to a variable.\n\n   b. When you use =, you are telling the program to store the value on the right-hand side of the operator into the variable on the left-hand side.\n\n   c. This operator is essential for assigning values to variables during the program's execution.\n\n2. == (Equality Comparison Operator):\n\n   a. The == symbol in C is known as the equality comparison operator. It is used to compare two values to check if they are equal.\n\n   b. The == operator evaluates to true (1) if the values on both sides are equal and false (0) if they are not equal.\n\n   c. This operator is commonly used in conditional statements, such as if conditions, to check whether two values are identical.\n\nThe modulus operator (%) in C is used to find the remainder of a division operation. It divides the number on the left-hand side by the number on the right-hand side and returns the remainder. This operator is useful for tasks like checking if a number is even or odd. For example, x % 2 == 0 checks if x is even. It is commonly used in loops and conditions for cyclic operations.",
                     "outputImage": "",
                     "fileImage": ""
