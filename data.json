@@ -32,9 +32,9 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
-                    "outpuImage":"",
+                    "title":"Write a program using user-defined function to check whether the given number is odd or even.",
+                    "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
+                    "outpuImage":"aavash output.png",
                     "fileImage":"",
                 }
             ]
