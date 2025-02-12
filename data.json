@@ -14,6 +14,11 @@
                     "code": "#include<stdio.h>\n\nint main(){\n    FILE *fp;\n    int n,n1;\n    fp = fopen(\"./fileint.txt\",\"w+\");\n    printf(\"Enter a number: \");\n    scanf(\"%d\",&n);\n    putw(n,fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    n1 = getw(fp);\n    printf(\"The entered number is %d\\n\",n1);\n    printf(\"Program executed by darshan subedi XII 746\");\n}",
                     "outputImage": "./assets/filehandling_ii/2_output.PNG",
                     "fileImage": "./assets/filehandling_ii/2_file.PNG"
+                },{
+                    "title":"Write a C program to append content to an existing file. Dikshyanta Karki (749)",
+                    "code": "#include <stdio.h>\n\n\nint main() {\n FILE *file; char content[] =\"This is the appended content.\"; \nfile = fopen(\"existing.txt\", \"a\"); \nif (file == NULL) {\n printf(\"Error opening file for appending.\");\n  }\n fprintf(file, \"%s\", content); fclose(file);\n return 0;\n }",
+                    "outputImage": "./assets/filehandling_ii/49_output.png",
+                    "fileImage": "./assets/filehandling_ii/49_output2.png"
                 }
             ]
         },
