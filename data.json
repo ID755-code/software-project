@@ -32,8 +32,8 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
+                    "title":"What are the different types of control structures in programming",
+                    "code":"Sequential Control\n#include <stdio.h>\n\nint main() {\n    // Sequential Execution\n    printf(\"Hello\\n\");\n    printf(\"World\\n\");\n    return 0;\n}\n\nSelection Control\nIf Statement\n#include <stdio.h>\nint main() {\n    // If Statement\n    int age = 18;\n    if (age >= 18) {\n        printf(\"You are an adult.\\n\");\n    }\n    return 0;\n}\n\nIf-Else Statement\n#include <stdio.h>\nint main() {\n    // If-Else Statement\n    int age = 16;\n    if (age >= 18) {\n        printf(\"You are an adult.\\n\");\n    } else {\n        printf(\"You are a minor.\\n\");\n    }\n    return 0;\n}\n\nRepetition Control (Loops)\nFor Loop\n#include <stdio.h>\nint main() {\n    // For Loop\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d\\n\", i + 1);\n    }\n    return 0;\n}\n\nWhile Loop\n#include <stdio.h>\n\nint main() {\n    // While Loop\n    int count = 0;\n    while (count < 5) {\n        printf(\"Count is %d\\n\", count);\n        count++;\n    }\n    return 0;\n}\n\nJump Control\n#include <stdio.h>\nint main() {\n    // Break Statement\n    for (int i = 0; i < 10; i++) {\n        if (i == 5) {\n            break;  // Exit the loop when i is 5\n        }\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}\n\nContinue\n#include <stdio.h>\nint main() {\n    // Continue Statement\n    for (int i = 0; i < 5; i++) {\n        if (i == 2) {\n            continue;  // Skip the rest of the loop when i is 2\n        }\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
                     "outpuImage":"",
                     "fileImage":"",
                 }
