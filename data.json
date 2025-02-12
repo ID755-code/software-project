@@ -32,7 +32,7 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"29. Roll no. 729 Write a program to generate Fibonacci series using recursion.",
+                    "title":"29. Write a program to generate Fibonacci series using recursion. Answered by Anwesh Shrestha 729",
                     "code":"#include<stdio.h>
 int recursivefibonacci(int);
 
