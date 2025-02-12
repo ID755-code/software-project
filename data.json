@@ -32,10 +32,10 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
-                    "outpuImage":"",
-                    "fileImage":"",
+                    "title":"Write a program using user-defined function to check whether the given number is palindrome or not. aashraya pokharel",
+                    "code":"#include <stdio.h>\n\nint isPalindrome(int num) {\n    int originalNum, reversedNum = 0, remainder;\n    originalNum = num;\n    while (num != 0) {\n        remainder = num % 10;\n        reversedNum = reversedNum * 10 + remainder;\n        num /= 10;\n    }\n    if (originalNum == reversedNum) {\n        return 1; \n    } else {\n        return 0; \n    }\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    if (isPalindrome(number)) {\n        printf(\"%d is a palindrome.\\n\", number);\n    } else {\n        printf(\"%d is not a palindrome.\\n\", number);\n    }\n    return 0;\n}",
+                    "outputImage":"./assets/cprogramming/palindrome.png",
+                    "fileImage":""
                 }
             ]
         }
