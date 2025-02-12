@@ -15,6 +15,7 @@
                     "outputImage": "./assets/filehandling_ii/2_output.PNG",
                     "fileImage": "./assets/filehandling_ii/2_file.PNG"
                 }
+
             ]
         },
         {
@@ -29,13 +30,24 @@
             ]
         },
         {
+            "name": "Stuctures in C",
+            "snippets": [
+                {
+                    "title": "What is union? Explain the differences between structure and union.",
+                    "code": "Please Find Attachment",
+                    "outputImage": "./assets/filehandling_ii/bob1_output.PNG",
+                    "fileImage": ""
+                }
+            ]
+        },
+        {
             "name":"C programmin",
             "snippets":[
                 {
                     "title":"",
                     "code":"",
                     "outpuImage":"",
-                    "fileImage":"",
+                    "fileImage":""
                 }
             ]
         }
