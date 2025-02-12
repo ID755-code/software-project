@@ -29,13 +29,12 @@
             ]
         },
         {
-            "name":"C programmin",
+            "name":"C programming",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
-                    "outpuImage":"",
-                    "fileImage":"",
+                    "title":"Write a program using user-defined function to check whether the given year is leap year or not.",
+                    "code":"assets/filehandling_ii/Aman-22_C.png",
+                    "outpuImage":"assets/filehandling_ii/Aman-22_Output.png"
                 }
             ]
         }
