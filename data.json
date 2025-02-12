@@ -32,9 +32,9 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"Write a program using user-defined function to find the greatest among 3 numbers.",
+                    "title":"Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
                     "code":"#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \\n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
-                    "outpuImage":"",
+                    "outpuImage":"./assets/filehandling_ii/output_15.PNG",
                     "fileImage":"",
                 }
             ]
