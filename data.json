@@ -18,6 +18,13 @@
             ]
         },
         {
+            "title": "30. Write down the differences between call by value and call by reference.",
+            "code": "This question doesnot require code to be written. View the output!",
+            "outputImage": "./assets/filehandling_ii/2_output.PNG",
+            "fileImage": "./assets/filehandling_ii/2_file.PNG"
+            
+        }
+        {
             "name": "Dynamic Memory Allocation",
             "snippets": [
                 {
