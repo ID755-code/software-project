@@ -32,8 +32,27 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
+                    "title":"29. Write a program to generate Fibonacci series using recursion.",
+                    "code":"#include<stdio.h>
+int recursivefibonacci(int);
+
+void main(){
+    int n, x;
+    printf("Please enter the total number of values you want in the Fibonacci series : \n");
+    scanf("%d", &n);
+    printf("The Fibonacci series of these numbers would be equal to : \n");
+
+    for(x = 0; x < n; x++) {
+        printf("%d ", recursivefibonacci(x)); // This will print the fibonacci series upto nth term
+    }
+}
+
+int recursivefibonacci(int x){
+    if(x == 0) return 0;
+    else if(x == 1) return 1;
+    else return (recursivefibonacci(x - 1) + recursivefibonacci(x - 2));
+}
+",
                     "outpuImage":"",
                     "fileImage":"",
                 }
