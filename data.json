@@ -1,37 +1,78 @@
-{
-    "collections": [
+
+{  
+"collections": [  
+    {
+      "name": "C programming",
+      "snippets": [
         {
-            "name": "File Handling",
-            "snippets": [
-                {
-                    "title": "Write a C program to write a character and display it using fgetc() and fputc() functions.",
-                    "code": "#include<stdio.h>\nint main(){\n    FILE *fp;\n    char ch, c;\n    fp = fopen(\"./filechar.txt\", \"w+\");\n    printf(\"Enter a character: \");\n    scanf(\"%s\", &ch);\n    fputc(ch, fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    c = fgetc(fp);\n    printf(\"The entered character is %c\", c);\n    printf(\"\\nProgram executed by darshan subedi XII 746\");\n}",
-                    "outputImage": "./assets/filehandling_ii/1_output.PNG",
-                    "fileImage": "./assets/filehandling_ii/1_file.PNG"
-                },
-                {
-                    "title": "Write a C program to write a number and display it using getw() and putw() functions.",
-                    "code": "#include<stdio.h>\n\nint main(){\n    FILE *fp;\n    int n,n1;\n    fp = fopen(\"./fileint.txt\",\"w+\");\n    printf(\"Enter a number: \");\n    scanf(\"%d\",&n);\n    putw(n,fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    n1 = getw(fp);\n    printf(\"The entered number is %d\\n\",n1);\n    printf(\"Program executed by darshan subedi XII 746\");\n}",
-                    "outputImage": "./assets/filehandling_ii/2_output.PNG",
-                    "fileImage": "./assets/filehandling_ii/2_file.PNG"
-                },
-                {
-                    "title": "Write a program using user-defined function to check whether the given number is Armstrong or not.",
-                    "code": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n     while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\\n\", num);\n    }\n    return 0;\n}\n",
-                    "outputImage": "./assets/filehandling_ii/3_output.PNG",
-                }
-            ]
+          "title": "What is the difference between the = symbol and == symbol? What is the modulus operator? (By- Aadarsha Kafle 703)",
+          "code": "1. = (Assignment Operator):\n\n   a. The = symbol in C is known as the assignment operator. It is used to assign a value to a variable.\n\n   b. When you use =, you are telling the program to store the value on the right-hand side of the operator into the variable on the left-hand side.\n\n   c. This operator is essential for assigning values to variables during the program's execution.\n\n2. == (Equality Comparison Operator):\n\n   a. The == symbol in C is known as the equality comparison operator. It is used to compare two values to check if they are equal.\n\n   b. The == operator evaluates to true (1) if the values on both sides are equal and false (0) if they are not equal.\n\n   c. This operator is commonly used in conditional statements, such as if conditions, to check whether two values are identical.\n\nThe modulus operator (%) in C is used to find the remainder of a division operation. It divides the number on the left-hand side by the number on the right-hand side and returns the remainder. This operator is useful for tasks like checking if a number is even or odd. For example, x % 2 == 0 checks if x is even. It is commonly used in loops and conditions for cyclic operations.",
+          "outputImage": "",
+          "fileImage": ""
         },
         {
-            "name": "Dynamic Memory Allocation",
-            "snippets": [
-                {
-                    "title": "Write a C program to demonstrate the use of malloc() and free().",
-                    "code": "#include<stdio.h>\n#include<stdlib.h>\n\nint main(){\n    int *ptr;\n    ptr = (int*)malloc(5 * sizeof(int));\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        return 1;\n    }\n    for (int i = 0; i < 5; i++) {\n        ptr[i] = i + 1;\n    }\n    printf(\"Stored values: \");\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", ptr[i]);\n    }\n    free(ptr);\n    return 0;\n}",
-                    "outputImage": "./assets/malloc_output.PNG",
-                    "fileImage": "./assets/malloc_file.PNG"
-                }
-            ]
-        }
-    ]
+            "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
+            "code": "This question doesnot require code to be written. View the output!",
+            "outputImage": "./assets/filehandling_ii/answer.PNG",
+            "fileImage": "./assets/filehandling_ii/answer.PNG"
+            
+        },
+        {
+          "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
+          "code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}",
+          "outputImage": "./assets/53.png",
+          "fileImage": ""
+        },
+        {
+          "title": "Write a C program to append content to an existing file. Dikshyanta Karki (749)",
+          "code": "#include <stdio.h>\n\nint main() {\n    FILE *file;\n    char content[] = \"This is the appended content.\";\n    file = fopen(\"existing.txt\", \"a\");\n    if (file == NULL) {\n        printf(\"Error opening file for appending.\");\n        return 1;\n    }\n    fprintf(file, \"%s\", content);\n    fclose(file);\n    return 0;\n}",
+          "outputImage": "./assets/filehandling_ii/49_output.png",
+          "fileImage": "./assets/filehandling_ii/49_output2.png"
+        },
+        {
+          "title": "Write a C program to calculate the sum of n natural numbers. Ambu shree",
+          "code": "//Write a program using user-defined function to find the sum of N natural numbers.\n//DONE BY AMBU SHREE POUDEL (723)\n#include <stdio.h>\n\nint main() {\n    int n, sum;\n\n    // Input the value of n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    sum = n * (n + 1) / 2;\n\n    printf(\"Sum of first %d natural numbers is: %d\\n\", n, sum);\n\n    return 0;\n}",
+          "outputImage": "./assets/filehandling_ii/sumof_n_natural_number.png",
+          "fileImage": ""
+        },
+        {
+          "title": "What are unary and ternary operators? Explain all the types of operators in brief. (Abiral Kharel)",
+          "code": "Unary operators are those operators which require only one operand to execute their respective operations. In C-Programming Language, unary operators include ++, --, and sizeof(). \n\n++ operator:\nThis operator, also known as the increment operator, is used to increase a number or any other numerical value by 1. This operator can be used in two types of ways, pre or post. Pre-increment operator is the usage of this operator in which the operator is put in front of the operand (++a), whereas, post-increment operator is used by putting the operator after the operand(a++). \n\n-- operator:\nSimilar to the increment operator, the decrement operator is used to decrease a numerical value by 1. This operator is also used in two ways, pre and post. The pre usage is the one in which the operator is put in front of the operand(--a) and post-decrement operator is the one in which the operator is put behind the operand for the operation(a--). \n\nIn C, the pre-increment operator (++i) is used when we want to increase the value of a variable before using it in an expression. On the other hand, the post-increment operator (i++) is used when we want to increase the value of a variable after using it in an expression.\n\nTernary operators are those types of operators which require three operands to execute their function. They are also called conditional operators. ‘?:’ is the only ternary operator used in C.\n\n?: operator:\nWhenever a program executes conditionally according to a particular statement, then we use conditional operators. Let us consider an example. Suppose Expression1 is the condition to be evaluated. If the condition(Expression1) is true then it will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then it will execute and return the result of Expression3.\n\nExample:\nCondition ? True : False\nmax = num1 > num2 ? num1 : num2;\n\nBinary operators are those types of operators which require two operands to function/ execute their operations. Binary operators include +, -, *, /, %, &&, || etc. It is the most commonly used type of operator in the C-Language. Its types include Arithmetic Operators(+, -, *, /), Logical Operators(||, &&, !=, ==), Assignment Operators(=, +=, -=), Relational Operators(<, >, <=, >=), etc.",
+          "outputImage": "",
+          "fileImage": ""
+        },
+         {
+          "title": "What is debugging? What does the && operator do in a program code? (Aarshu shakya)",
+          "code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The exampe of its code is given below.",
+          "outputImage": "./assets/filehandling_ii/Example.png",
+           "fileImage": ""
+        },
+    
+        {
+            "title": "What are compound statements? What is the advantage of an array over individual variables?",
+            "code": "A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.\n\nExample:\n\nif (condition) {\n    // This is a compound statement\n    statement1();\n    statement2();\n}\n\nAdvantages of Arrays Over Individual Variables in C:\n1. Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.\n2. Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.\n\n   int arr[5] = {1, 2, 3, 4, 5};\n   int value = arr[2]; // Accessing the third element\n3. Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.\n\n   for (int i = 0; i < 5; i++) {\n       printf(\"%d \", arr[i]); // Print all elements\n   }\n4. Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.\n5. Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.\n\n   int *arr = malloc(size * sizeof(int)); // Dynamic array allocation\n6. Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.\n\nThese characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
+            "exampleCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d:\\n\", i);\n        // Compound statement\n        {\n            int square = i * i;\n            printf(\"Square of %d is %d\\n\", i, square);\n        }\n    }\n    return 0;\n}",
+            "outputImage": "./assets/ss066.png",
+            "fileImage": "./assets/ss06.png"
+        },
+
+        {
+          "title":"Write a program using user-defined function to check whether the given year is leap year or not. (Aman Kumar Yadav)",
+             "code":"assets/filehandling_ii/Aman-22_C.png",
+             "outputImage":"assets/filehandling_ii/Aman-22_Output.png",
+             "fileImage" : ""
+
+          },
+          {
+           "title": "Write a program using user-defined function to check whether the given number is Armstrong or not.",
+            "code": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n     while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\\n\", num);\n    }\n    return 0;\n}\n",
+            "outputImage": "./assets/filehandling_ii/3_output.PNG"
+          }
+          
+        
+      ]
+    }
+  ]
+
+
 }
