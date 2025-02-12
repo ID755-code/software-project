@@ -39,7 +39,7 @@
                 {
                     "title":"Write a program to read and write from a file using getw() and putw() function. (Pratik GC)",
                     "code":"#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
-                    "outpuImage":"./assets/image7.PNG",
+                    "outputImage":"./assets/image7.PNG",
                     "fileImage":""
                 }
             ]
@@ -47,7 +47,7 @@
                 {
                     "title":"Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
                     "code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    return 0;\n}"
-                    "outpuImage":"./assets/53.png",
+                    "outputImage":"./assets/53.png",
                     "fileImage":""
                 }
             ]
@@ -55,7 +55,7 @@
                 {
                     "title":" What are unary and ternary operators? Explain all the types of operators in brief. (Abiral Kharel)",
                     "text": "Unary operators are those operators which require only one operand to execute their respective operations. In C-Programming Language, unary operators include ++, - -, and sizeof(). \n++ operator:\nThis operator, also known as the increment operator, is used to increase a number or any other numerical value by 1. This operator can be used in two types of ways, pre or post. Pre-increment operator is the usage of this operator in which the operator is put in front of the operand (++a), whereas, post-increment operator is used by putting the operator after the operand(a++). \n\n- - operator:\nSimilar to the increment operator, the decrement operator is used to decrease a numerical value by 1. This operator is also used in two ways, pre and post. The pre usage is the one in which the operator is put in front of the operand(- -a) and post-decrement operator is the one in which the operator is put behind the operand for the operation(++a). \n\nIn C, the pre-increment operator (++i) is used when we want to increase the value of a variable before using it in an expression. On the other hand, the post-increment operator (i++) is used when we want to increase the value of a variable after using it in an expression.\n\nTernary operators are those types of operators which require three operands to execute their function. They are also called conditional operators. ‘?:’ is the only ternary operator used in C.\n\n?: operator:\nWhenever a program executes conditionally according to a particular statement, then we use conditional operators. Let us consider an example. Suppose Expression1 is the condition to be evaluated. If the condition(Expression1) is true then it will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then it will execute and return the result of Expression3.\n\nExample:\nCondition ? True : False\nmax = num1 > num2 ? num1 : num2;\n\nBinary operators are those types of operators which require two operands to function/ execute their operations. Binary operators include +, -, *, /, %,&&, || etc. It is the most commonly used type of operator in the C-Language. Its types include Arithmetic Operators(+, -, *, /), Logical Operators(||, &&, !=, ==), Assignment Operators(=, +=, -+), Relational Operators(<, >, <=, >=), etc."
-                    "outpuImage":"",
+                    "outputImage":"",
                     "fileImage":""
                 }
             ]
