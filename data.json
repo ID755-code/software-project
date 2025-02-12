@@ -29,7 +29,7 @@
             ]
         },
         {
-            "name":"C programmin",
+            "name":"C programming",
             "snippets":[
                 {
                     "title":"29. Write a program to generate Fibonacci series using recursion. Answered by Anwesh Shrestha 729",
@@ -53,7 +53,7 @@ int recursivefibonacci(int x){
     else return (recursivefibonacci(x - 1) + recursivefibonacci(x - 2));
 }
 ",
-                    "outpuImage":"./assets/filehandling_ii/fibo_output.png",
+                    "outputImage":"./assets/filehandling_ii/fibo_output.png",
                     "fileImage":"./assets/filehandling_ii/fibo_output.png",
                 }
             ]
