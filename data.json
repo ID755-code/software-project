@@ -27,6 +27,17 @@
                     "fileImage": "./assets/malloc_file.PNG"
                 }
             ]
+        },
+        {
+            "name":"C programmin",
+            "snippets":[
+                {
+                    "title":"",
+                    "code":"",
+                    "outpuImage":"",
+                    "fileImage":"",
+                }
+            ]
         }
     ]
 }
