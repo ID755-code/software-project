@@ -30,51 +30,13 @@
         },
         {
             "name":"C programmin",
-            "snippets":[
-                {
-                    "title":"What are compound statements? What is the advantage of an array over individual variables?",
-                    "code":"A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.
-
-Example:
-
-if (condition) {
-    // This is a compound statement
-    statement1();
-    statement2();
-}
-Advantages of Arrays Over Individual Variables in C
-Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.
-Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.
-
-int arr[5] = {1, 2, 3, 4, 5};
-int value = arr[2]; // Accessing the third element
-Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.
-
-for (int i = 0; i < 5; i++) {
-    printf("%d ", arr[i]); // Print all elements
-}
-Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.
-Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.
-
-int *arr = malloc(size * sizeof(int)); // Dynamic array allocation
-Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.
-These characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
-
-Example Code: #include <stdio.h>
-
-int main() {
-for (int i = 0; i < 5; i++) {
-printf("Iteration %d:\n", i);
-// Compound statement
-{
-int square = i * i;
-printf("Square of %d is %d\n", i, square);
-}
-}
-return 0;
-}
-                    "outpuImage":"./assets/ss066,png",
-                    "fileImage":"./assets/ss06,png",
+            "snippets": [
+        {
+            "title": "What are compound statements? What is the advantage of an array over individual variables?",
+            "code": "A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.\n\nExample:\n\nif (condition) {\n    // This is a compound statement\n    statement1();\n    statement2();\n}\n\nAdvantages of Arrays Over Individual Variables in C:\n1. Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.\n2. Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.\n\n   int arr[5] = {1, 2, 3, 4, 5};\n   int value = arr[2]; // Accessing the third element\n3. Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.\n\n   for (int i = 0; i < 5; i++) {\n       printf(\"%d \", arr[i]); // Print all elements\n   }\n4. Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.\n5. Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.\n\n   int *arr = malloc(size * sizeof(int)); // Dynamic array allocation\n6. Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.\n\nThese characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
+            "exampleCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d:\\n\", i);\n        // Compound statement\n        {\n            int square = i * i;\n            printf(\"Square of %d is %d\\n\", i, square);\n        }\n    }\n    return 0;\n}",
+            "outputImage": "./assets/ss066.png",
+            "fileImage": "./assets/ss06.png"
                 }
             ]
         }
