@@ -51,6 +51,14 @@
                     "fileImage":""
                 }
             ]
+            "snippets":[
+                {
+                    "title":" What are unary and ternary operators? Explain all the types of operators in brief. (Abiral Kharel)",
+                    "text": "Unary operators are those operators which require only one operand to execute their respective operations. In C-Programming Language, unary operators include ++, - -, and sizeof(). \n++ operator:\nThis operator, also known as the increment operator, is used to increase a number or any other numerical value by 1. This operator can be used in two types of ways, pre or post. Pre-increment operator is the usage of this operator in which the operator is put in front of the operand (++a), whereas, post-increment operator is used by putting the operator after the operand(a++). \n\n- - operator:\nSimilar to the increment operator, the decrement operator is used to decrease a numerical value by 1. This operator is also used in two ways, pre and post. The pre usage is the one in which the operator is put in front of the operand(- -a) and post-decrement operator is the one in which the operator is put behind the operand for the operation(++a). \n\nIn C, the pre-increment operator (++i) is used when we want to increase the value of a variable before using it in an expression. On the other hand, the post-increment operator (i++) is used when we want to increase the value of a variable after using it in an expression.\n\nTernary operators are those types of operators which require three operands to execute their function. They are also called conditional operators. ‘?:’ is the only ternary operator used in C.\n\n?: operator:\nWhenever a program executes conditionally according to a particular statement, then we use conditional operators. Let us consider an example. Suppose Expression1 is the condition to be evaluated. If the condition(Expression1) is true then it will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then it will execute and return the result of Expression3.\n\nExample:\nCondition ? True : False\nmax = num1 > num2 ? num1 : num2;\n\nBinary operators are those types of operators which require two operands to function/ execute their operations. Binary operators include +, -, *, /, %,&&, || etc. It is the most commonly used type of operator in the C-Language. Its types include Arithmetic Operators(+, -, *, /), Logical Operators(||, &&, !=, ==), Assignment Operators(=, +=, -+), Relational Operators(<, >, <=, >=), etc."
+                    "outpuImage":"",
+                    "fileImage":""
+                }
+            ]
         }        
     ]
 }
