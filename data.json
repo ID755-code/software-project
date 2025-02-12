@@ -59,7 +59,21 @@ Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow 
 int *arr = malloc(size * sizeof(int)); // Dynamic array allocation
 Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.
 These characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
-                    "outpuImage":"",
+
+Example Code: #include <stdio.h>
+
+int main() {
+for (int i = 0; i < 5; i++) {
+printf("Iteration %d:\n", i);
+// Compound statement
+{
+int square = i * i;
+printf("Square of %d is %d\n", i, square);
+}
+}
+return 0;
+}
+                    "outpuImage":"./assets/ss066,png",
                     "fileImage":"./assets/ss06,png",
                 }
             ]
