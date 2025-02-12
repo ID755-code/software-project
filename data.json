@@ -88,6 +88,7 @@
           "outputImage":"",
           "fileImage":""
         },
+        {
           "title": "Write a C program to remove a file.(Dibyam Acharya)",
           "code": "#include <stdio.h>\nint main() {\n    FILE * fp;\n    fp=fopen(\"Shrek.txt\",\"w\");\n    if(fp==NULL)\n    {\n        printf(\"Error in opening file\\n\");\n    }\n    else\n    {\n        fclose(fp);\n        remove(\"Shrek.txt\");\n        printf(\"The file was successfully removed\");\n    }\n    return 0;\n}",
           "outputImage": "./assets/48_Output.png",
