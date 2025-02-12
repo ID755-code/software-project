@@ -32,8 +32,29 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
+                    "title":"What is recursion in c? Write a program to find the factorial of a number using recursion.",
+                    "code":"#include <stdio.h>
+int factorial(int a);
+int main(){
+    int x;
+    printf("Enter the value of N: ");
+    scanf("%d",&x);
+    int result = factorial(x);
+    printf("%d",result);
+    
+
+    return 0;
+}
+
+int factorial(int a){
+    if(a==1 || a==0){
+        return 1;
+    }
+    else{
+        return (a * factorial(a-1));
+    }
+}
+",
                     "outpuImage":"",
                     "fileImage":""
                 }
