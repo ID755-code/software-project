@@ -32,10 +32,11 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
-                    "outpuImage":"",
-                    "fileImage":"",
+                    "title":"Write a C program to calculate the sum of n natural numbers.",
+                    "subtitle":"Done by Ambu Shree Poudel (723)",
+                    "code":"//Write a program using user-defined function to find the sum of N natural numbers.\n//DONE BY AMBU SHREE POUDEL (723)\n#include <stdio.h>\n\nint main() {\n    int n, sum;\n\n    // Input the value of n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    sum = n * (n + 1) / 2;\n\n    printf(\"Sum of first %d natural numbers is: %d\\n\", n, sum);\n\n    return 0;\n}",
+                    "outputImage":"AMBYSG/software-project/assets/filehandling_ii/sumof n natural number.png",
+                    "fileImage":""
                 }
             ]
         }
