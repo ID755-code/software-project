@@ -1,41 +1,148 @@
 {
     "collections": [
         {
-            "name": "File Handling",
+            "name": "C programming",
             "snippets": [
                 {
-                    "title": "Write a C program to write a character and display it using fgetc() and fputc() functions.",
-                    "code": "#include<stdio.h>\nint main(){\n    FILE *fp;\n    char ch, c;\n    fp = fopen(\"./filechar.txt\", \"w+\");\n    printf(\"Enter a character: \");\n    scanf(\"%s\", &ch);\n    fputc(ch, fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    c = fgetc(fp);\n    printf(\"The entered character is %c\", c);\n    printf(\"\\nProgram executed by darshan subedi XII 746\");\n}",
-                    "outputImage": "./assets/filehandling_ii/1_output.PNG",
-                    "fileImage": "./assets/filehandling_ii/1_file.PNG"
+                   
+                    "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
+                    "code": "This question does not require code to be written. View the output!",
+                    "outputImage": "./assets/filehandling_ii/answer.PNG",
+                    "fileImage": "./assets/filehandling_ii/answer.PNG"
                 },
                 {
-                    "title": "Write a C program to write a number and display it using getw() and putw() functions.",
-                    "code": "#include<stdio.h>\n\nint main(){\n    FILE *fp;\n    int n,n1;\n    fp = fopen(\"./fileint.txt\",\"w+\");\n    printf(\"Enter a number: \");\n    scanf(\"%d\",&n);\n    putw(n,fp);\n    printf(\"Reading the file\\n\");\n    rewind(fp);\n    n1 = getw(fp);\n    printf(\"The entered number is %d\\n\",n1);\n    printf(\"Program executed by darshan subedi XII 746\");\n}",
-                    "outputImage": "./assets/filehandling_ii/2_output.PNG",
-                    "fileImage": "./assets/filehandling_ii/2_file.PNG"
-                }
-            ]
-        },
-        {
-            "name": "Dynamic Memory Allocation",
-            "snippets": [
+                    "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
+                    "code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\n\");\n\n    return 0;\n}",
+                    "outputImage": "./assets/53.png",
+                    "fileImage": ""
+                },
                 {
-                    "title": "Write a C program to demonstrate the use of malloc() and free().",
-                    "code": "#include<stdio.h>\n#include<stdlib.h>\n\nint main(){\n    int *ptr;\n    ptr = (int*)malloc(5 * sizeof(int));\n    if (ptr == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        return 1;\n    }\n    for (int i = 0; i < 5; i++) {\n        ptr[i] = i + 1;\n    }\n    printf(\"Stored values: \");\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", ptr[i]);\n    }\n    free(ptr);\n    return 0;\n}",
-                    "outputImage": "./assets/malloc_output.PNG",
-                    "fileImage": "./assets/malloc_file.PNG"
-                }
-            ]
-        },
-        {
-            "name":"C programmin",
-            "snippets":[
+                    "title": "What is file handling? Explain the types of file handling mode in brief. Write a C program to write a character and display it using fgetc () and fputc () functions. [Biraj Bhusal (741)]",
+                    "code": "File handling is the process of creating, opening, reading, writing, and closing files in a program. It allows data to be stored permanently in secondary storage, making it possible to save and retrieve information across different executions of a program.\nFile handling modes define how a file is accessed in a program. There are 12 different modes, each serving a specific purpose for reading, writing, or appending data. Below is a brief explanation of each mode:\n\n1. \"r\" (Read Mode): This mode is used to open an existing file for reading only. If the file does not exist, the function returns NULL. The file pointer is positioned at the beginning of the file, and attempting to write to the file in this mode will result in an error.\n\n2. \"w\" (Write Mode): This mode opens a file for writing, creating a new file if it does not exist. If the file already exists, its content is erased, and new data is written from the beginning. Since it only supports writing, attempting to read from the file in this mode will lead to an error.\n\n3. \"a\" (Append Mode): This mode opens a file for appending data at the end. If the file does not exist, it creates a new one. Unlike \"w\", it does not erase existing content but only allows adding new data at the end.\n\n4. \"rb\" (Read Binary Mode): Similar to \"r\", but used for reading binary files like images, audio, and video. The file must exist; otherwise, the function returns NULL. It reads data in binary form, preserving its original structure.\n\n5. \"wb\" (Write Binary Mode): This mode is used to create a new binary file or overwrite an existing one. It writes data in binary format instead of text. If the file already exists, all previous content is erased.\n\n6. \"ab\" (Append Binary Mode): This mode opens a binary file to add new data at the end. If the file does not exist, a new one is created. Unlike \"wb\", it does not delete previous content but appends new binary data.\n\n7. \"r+\" (Read and Write Mode): This mode allows both reading and writing to a file. The file must already exist; otherwise, it returns an error. The file pointer is positioned at the beginning, allowing updates to existing content.\n\n8. \"w+\" (Write and Read Mode): This mode creates a new file or overwrites an existing one, allowing both reading and writing. Since the existing content is deleted, it is useful when fresh data needs to be stored. The file pointer is positioned at the beginning.\n\n9. \"a+\" (Append and Read Mode): This mode allows both reading and appending to a file. If the file does not exist, it creates a new one. Reading starts from the beginning, but writing always happens at the end without deleting previous content.\n\n10. \"rb+\" (Read and Write Binary Mode): This mode is similar to \"r+\", but for binary files. It allows reading and modifying existing binary files without deleting their content. The file must already exist, or an error is returned.\n\n11. \"wb+\" (Write and Read Binary Mode): This mode creates a new binary file or overwrites an existing one, allowing both reading and writing. Any existing content is erased, making it useful for fresh binary data storage. The file pointer starts at the beginning.\n\n12. \"ab+\" (Append and Read Binary Mode): This mode allows reading and appending to a binary file. If the file exists, new data is added at the end, while reading is possible from the beginning. If the file does not exist, a new one is created.\n\nThese file handling modes help manage data efficiently, whether dealing with text or binary files, ensuring proper access according to the required operation.\n\n Code:\n #include <stdio.h>\nint main() {\nFILE *fp;\nchar c;\nfp = fopen(\"D:\\\biraj.txt\", \"w\");\nif (fp == NULL) {\nprintf(\"Could not open file\n\");\nreturn 1;\n}\nc = 'A';\nfputc(c, fp);\nfclose(fp);\nfp = fopen(\"D:\\\biraj.txt\", \"r\");\nif (fp == NULL) {\nprintf(\"Could not open file\n\");\nreturn 1;\n}\nc = fgetc(fp);\nprintf(\"The character is: %c\n\", c);\nfclose(fp);\nprintf(\"\n\nDone by: Biraj Bhusal\");\nreturn 0;\n}",
+                    "outputImage": "./assets/filehandling_ii/41_outputimage.png",
+                    "fileImage": "./assets/filehandling_ii/41_fileimage.png"
+                },
                 {
+                    "title": "Write a C program to append content to an existing file. Dikshyanta Karki (749)",
+                    "code": "#include <stdio.h>\n\nint main() {\n    FILE *file;\n    char content[] = \"This is the appended content.\";\n    file = fopen(\"existing.txt\", \"a\");\n    if (file == NULL) {\n        printf(\"Error opening file for appending.\");\n        return 1;\n    }\n    fprintf(file, \"%s\", content);\n    fclose(file);\n    return 0;\n}",
+                    "outputImage": "./assets/filehandling_ii/49_output.png",
+                    "fileImage": "./assets/filehandling_ii/49_output2.png"
+                },
+                {
+                    "title": "Write a C program to calculate the sum of n natural numbers. Ambu shree",
+                    "code": "//Write a program using user-defined function to find the sum of N natural numbers.\n//DONE BY AMBU SHREE POUDEL (723)\n#include <stdio.h>\n\nint main() {\n    int n, sum;\n\n    // Input the value of n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    sum = n * (n + 1) / 2;\n\n    printf(\"Sum of first %d natural numbers is: %d\n\", n, sum);\n\n    return 0;\n}",
+                    "outputImage": "./assets/filehandling_ii/sumof_n_natural_number.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What are unary and ternary operators? Explain all the types of operators in brief. (Abiral Kharel)",
+                    "code": "Unary operators are those operators which require only one operand to execute their respective operations. In C-Programming Language, unary operators include ++, --, and sizeof(). \n\n++ operator:\nThis operator, also known as the increment operator, is used to increase a number or any other numerical value by 1. This operator can be used in two types of ways, pre or post. Pre-increment operator is the usage of this operator in which the operator is put in front of the operand (++a), whereas, post-increment operator is used by putting the operator after the operand(a++). \n\n-- operator:\nSimilar to the increment operator, the decrement operator is used to decrease a numerical value by 1. This operator is also used in two ways, pre and post. The pre usage is the one in which the operator is put in front of the operand(--a) and post-decrement operator is the one in which the operator is put behind the operand for the operation(a--). \n\nIn C, the pre-increment operator (++i) is used when we want to increase the value of a variable before using it in an expression. On the other hand, the post-increment operator (i++) is used when we want to increase the value of a variable after using it in an expression.\n\nTernary operators are those types of operators which require three operands to execute their function. They are also called conditional operators. ‘?:’ is the only ternary operator used in C.\n\n?: operator:\nWhenever a program executes conditionally according to a particular statement, then we use conditional operators. Let us consider an example. Suppose Expression1 is the condition to be evaluated. If the condition(Expression1) is true then it will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then it will execute and return the result of Expression3.\n\nExample:\nCondition ? True : False\nmax = num1 > num2 ? num1 : num2;\n\nBinary operators are those types of operators which require two operands to function/ execute their operations. Binary operators include +, -, *, /, %, &&, || etc. It is the most commonly used type of operator in the C-Language. Its types include Arithmetic Operators(+, -, *, /), Logical Operators(||, &&, !=, ==), Assignment Operators(=, +=, -=), Relational Operators(<, >, <=, >=), etc.",
+                    "outputImage": "",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What is debugging? What does the && operator do in a program code? (Aarshu shakya)",
+                    "code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The example of its code is given below.",
+                    "outputImage": "./assets/filehandling_ii/Example.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What are compound statements? What is the advantage of an array over individual variables?",
+                    "code": "A compound statement in C is defined using braces {} to group multiple statements together. It allows you to execute several statements as a single block, which is particularly useful in control structures like if, for, and while.\n\nExample:\n\nif (condition) {\n    // This is a compound statement\n    statement1();\n    statement2();\n}\n\nAdvantages of Arrays Over Individual Variables in C:\n1. Organization: Arrays allow you to store multiple related values under a single name, making your code cleaner and more manageable.\n2. Index-Based Access: You can access elements using an index, which simplifies the retrieval and manipulation of data.\n\n   int arr[5] = {1, 2, 3, 4, 5};\n   int value = arr[2]; // Accessing the third element\n3. Iteration: Arrays can be easily traversed using loops, allowing for efficient operations on multiple elements.\n\n   for (int i = 0; i < 5; i++) {\n       printf(\"%d \", arr[i]); // Print all elements\n   }\n4. Memory Efficiency: Arrays can lead to more efficient memory usage, especially when dealing with large datasets, as they store data in contiguous memory locations.\n5. Dynamic Allocation: Using pointers, you can create dynamic arrays that can grow or shrink as needed, providing flexibility in data management.\n\n   int *arr = malloc(size * sizeof(int)); // Dynamic array allocation\n6. Performance: Accessing elements of an array is generally faster than accessing multiple individual variables due to better locality of reference in memory.\n\nThese characteristics make arrays a powerful tool in C programming, enabling better data handling and manipulation.",
+                    "exampleCode": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d:\n\", i);\n        // Compound statement\n        {\n            int square = i * i;\n            printf(\"Square of %d is %d\n\", i, square);\n        }\n    }\n    return 0;\n}",
+                    "outputImage": "./assets/ss066.png",
+                    "fileImage": "./assets/ss06.png"
+                },
+                {
+                    "title": "Write a program using user-defined function to check whether the given year is leap year or not. (Aman Kumar Yadav)",
+                    "code": "assets/filehandling_ii/Aman-22_C.png",
+                    "outputImage": "assets/filehandling_ii/Aman-22_Output.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": "Write a program using user-defined function to check whether the given number is Armstrong or not.",
+                    "code": "#include <stdio.h>\n#include <math.h>\n\nint is_armstrong(int num) {\n    int original_num, remainder, result = 0, n = 0;\n    original_num = num;\n\n     while (original_num != 0) {\n        original_num /= 10;\n        ++n;\n    }\n    original_num = num;\n\n    while (original_num != 0) {\n        remainder = original_num % 10;\n        result += pow(remainder, n);\n        original_num /= 10;\n    }\n    if (result == num) {\n        return 1; // Armstrong number\n    } else {\n        return 0; // Not an Armstrong number\n    }\n}\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    if (is_armstrong(num)) {\n        printf(\"%d is an Armstrong number.\n\", num);\n    } else {\n        printf(\"%d is not an Armstrong number.\n\", num);\n    }\n    return 0;\n}\n",
+                    "outputImage": "./assets/filehandling_ii/3_output.PNG",
+                    "fileImage": ""
+                },
+                {
+                    "title": "Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
+                    "code": "#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
+                    "outputImage": "./assets/filehandling_ii/question15.PNG",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What is union? Explain the differences between structure and union. (Baibhav Dhital)",
+                    "code": "Please Find Attachment",
+                    "outputImage": "./assets/filehandling_ii/bob1_output.PNG",
+                    "fileImage": ""
+                },
+                {
+                    "title": "Write a program using user-defined function to find the smallest among 3 numbers(Abhi Hada, 716)",
+                    "code": "#include<stdio.h>\n\nint small(int a, int b, int c);\n\nint main(){\n    int a, b, c, s;\n    printf(\"Enter any 3 number::\");\n    scanf(\"%d%d%d\", &a, &b, &c);\n    s = small(a, b, c);\n    printf(\"The smallest number among 3 numbers is %d\n\", s);\n    printf(\"The code was executed by 023neb716\");\n}\n\nint small(int a, int b, int c){\n    if(a < b && a < c){\n        return a;\n    }\n    else if(b < a && b < c){\n        return b;\n    }\n    else if(c < a && c < b){\n        return c;\n    }\n    else{\n        printf(\"Please don't enter equal numbers\");\n    }\n}",
+                    "ouputImage": "./assets/filehandling_ii/question16.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": "Write a program using user-defined function to find the factorial of a number. (Adarsha Subedi)",
+                    "code": "#include<stdio.h>\nint fact(int n);\nint main()\n{\n\tint n,result;\n\tprintf(\"Enter a number to find the factorial: \");\n\tscanf(\"%d\",&n);\n\tresult=fact(n);\n\tprintf(\"The factorial of %d is %d.\",n,result);\n\treturn 0;\n}\nint fact(int n){\n\tint i,a=1;\n\tfor(i=1;i<=n;i++){\n\t\ta*=i;\n\t}\n\treturn a;\n}",
+                    "outputImage": "./assets/filehandling_ii/factorial.PNG",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What are variables and in what way is it different from constants? How do you access the values within an array?",
+                    "code": "Variables:\nA variable is a named storage location in a computer's memory that can hold a value. The defining characteristic of a variable is that its value can be changed during the execution of a program. In the C programming language, variables must be declared with a specific data type, which dictates the kind of values they can hold. For example, an integer variable can be declared as follows:\n\nint x = 10; // Here, 'x' is a variable that holds the value 10.\n\nConstants:\nIn contrast, a constant is a value that cannot be altered once it has been assigned. Constants are useful for defining fixed values that should remain unchanged throughout the program. In C, constants can be declared using the const keyword. For example:\n\nconst int MAX_VALUE = 100; // 'MAX_VALUE' is a constant that holds the value 100.\n\nDifferences Between Variables and Constants\nMutability:\nVariables can change their values during program execution.\nConstants maintain the same value throughout the program.\n\nDeclaration:\nVariables are declared with their data types and can be re-assigned.\nConstants are declared using the const keyword and cannot be re-assigned.\n\nAccessing Values in an Array\nIn C, an array is a collection of elements of the same data type, stored in contiguous memory locations. To access the elements of an array, you use indices, which start from 0. For example, consider the following array declaration and element access:\n\n#include <stdio.h>\n\nint main() {\n    int myArray[4] = {10, 20, 30, 40}; // Declaration of an array\n\n    // Accessing array elements:\n    printf(\"%d\n\", myArray[0]); // Output: 10 (first element)\n    printf(\"%d\n\", myArray[1]); // Output: 20 (second element)\n    printf(\"%d\n\", myArray[2]); // Output: 30 (third element)\n    printf(\"%d\n\", myArray[3]); // Output: 40 (fourth element)\n\n    return 0;\n}\n\nConclusion\nIn summary, variables are mutable storage locations that can change over time, while constants are immutable values that remain constant. Arrays in C allow for the storage and access of multiple values using indices, enabling efficient data management and retrieval.",
+                    "outputImage": "",
+                    "fileImage": ""
+                },
+                {
+
                     "title":"Write a program using user-defined function to check whether the given number is odd or even.",
                     "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
-                    "outpuImage":"aavash output.png",
+                    "outputImage":"./assets/aavash_output.png",
                     "fileImage":"",
+                },
+              {
+                    "title": "Write a C program to remove a file.(Dibyam Acharya)",
+                    "code": "#include <stdio.h>\nint main() {\n    FILE * fp;\n    fp=fopen(\"Shrek.txt\",\"w\");\n    if(fp==NULL)\n    {\n        printf(\"Error in opening file\n\");\n    }\n    else\n    {\n        fclose(fp);\n        remove(\"Shrek.txt\");\n        printf(\"The file was successfully removed\");\n    }\n    return 0;\n}",
+                    "outputImage": "./assets/48_Output.png",
+                    "fileImage": "./assets/48_File.png"
+                },
+                {
+                    "title": "Program to find whether the number is prime or composite",
+                    "code": "#include <stdio.h>\n\nconst char* check_prime_or_composite(int number) {\n    if (number <= 1) {\n        return \"Neither prime nor composite\";\n    }\n    for (int i = 2; i * i <= number; i++) {\n        if (number % i == 0) {\n            return \"Composite\";\n        }\n    }\n    return \"Prime\";\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    printf(\"The number %d is %s.\n\", number, check_prime_or_composite(number));\n    return 0;\n}",
+                    "outputImage": "./assets/hari.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": "What is user-defined function? Explain all the types of user-defined functions in brief with a suitable program of each. - Aadarsh Thakur, 701",
+                    "code": "#include<stdio.h>\n\n// A user-defined function is a function that is defined by the programmer to perform a specific task.\n// It allows breaking down a complex problem into smaller, manageable pieces of code.\n\n// 1. Function without arguments and without return value\n// This type of function does not take any input parameters and does not return any value.\n// It simply performs a task, such as displaying a message or performing an operation.\nvoid displayMessage() {\n    printf(\"Hello, this is question no 1.\n\");\n}\n\n// 2. Function with arguments but without return value\n// This type of function takes input parameters, performs an operation using those parameters,\n// but does not return a value. It might, for example, display a result or perform some action.\nvoid addNumbers(int a, int b) {\n    printf(\"Sum: %d\n\", a + b);\n}\n\n// 3. Function without arguments but with return value\n// This type of function does not take any parameters but returns a value to the calling function.\n// For example, it could perform a calculation and return the result.\nint getNumber() {\n    return 10;  // Returns a constant value.\n}\n\n// 4. Function with arguments and with return value\n// This function takes input parameters, performs an operation using those parameters, \n// and returns a value. It combines both input and output functionality.\nint multiplyNumbers(int a, int b) {\n    return a * b;  // Returns the result of multiplying two numbers.\n}\n\nint main() {\n    // Function without arguments and without return value\n    displayMessage();  // Calls the displayMessage function to print a message\n\n    // Function with arguments but without return value\n    addNumbers(5, 3);  // Passes 5 and 3 as arguments to the addNumbers function\n\n    // Function without arguments but with return value\n    printf(\"Returned number: %d\n\", getNumber());  // Calls getNumber() and prints the returned value\n\n    // Function with arguments and with return value\n    printf(\"Multiplication result: %d\n\", multiplyNumbers(4, 2));  // Passes 4 and 2 to multiplyNumbers and prints the result\n\n    return 0;\n}\n\n/* \nExplanation of Types of User-Defined Functions:\n1. Function without arguments and without return value:\n   - Takes no input and does not return any value.\n   - Example: displayMessage().\n\n2. Function with arguments but without return value:\n   - Takes input parameters but does not return any result.\n   - Example: addNumbers(int a, int b).\n\n3. Function without arguments but with return value:\n   - Takes no input but returns a value.\n   - Example: getNumber().\n\n4. Function with arguments and with return value:\n   - Takes input parameters and returns a value.\n   - Example: multiplyNumbers(int a, int b).\n*/",
+                    "outputImage": "./assets/filehandling_ii/qno1.png",
+                    "fileImage": ""
+                },
+                {
+                    "title": " 55.Explain all the types of string handling functions in brief.-by Prajwol Chapagaee",
+                    "code": "String handling functions are essential for working with strings in programming as they encompass broad types of operations to manipulate, search, and modify string data. On the basis of the type of operation, string handling functions have been categorized as follows:\n\n1. Length Functions: These provide the measure of the size of a string. The number of characters, excluding the null terminator, is determined by `strlen()`, while `sizeof()` gives the total size of a string, counting the null terminator, in the language, such as C.\n\n2. Character Search Functions: These are functions that search a string for a character. The functions `strchr()` find the first occurrence of a character, `strrchr()` finds the last occurrence, and `strstr()` searches a string for another substring.\n\n3. String Manipulation Functions: Functions that perform operations on strings. For example, `strcat()`, which is used to concatenate two strings, and `strncat()`, used to append a given number of characters from one string to another.\n\n4. String Comparison Functions: These compare two strings. For instance, the `strcmp()` function compares two strings in dictionary order (in alphabetical order), while `strncmp()` compares a specified number of characters of both strings.\n\n5. String Copy Functions: In order to copy one string into another, one needs the help of these functions. For example, `strcpy()` copies an entire string, since `strncpy()` copies just a specific number of characters from one string to the other, which also helps in circumventing buffer overflow.\n\nThese string handling functions are critical for string searching, modification, and comparison, enabling the effective manipulation of strings in programming.",
+                    "outputImage": "",
+                    "fileImage": ""
+                },
+                {
+                    "title": "29. Write a program to generate Fibonacci series using recursion. Answered by Anwesh Shrestha 729",
+                    "code": "#include<stdio.h>\nint recursivefibonacci(int);\n\nvoid main(){\n    int n, x;\n    printf(\"Please enter the total number of values you want in the Fibonacci series : \n\");\n    scanf(\"%d\", &n);\n    printf(\"The Fibonacci series of these numbers would be equal to : \n\");\n\n    for(x = 0; x < n; x++) {\n        printf(\"%d \", recursivefibonacci(x)); // This will print the fibonacci series upto nth term\n    }\n}\n\nint recursivefibonacci(int x){\n    if(x == 0) return 0;\n    else if(x == 1) return 1;\n    else return (recursivefibonacci(x - 1) + recursivefibonacci(x - 2));\n}\n",
+                    "outputImage": "./assets/filehandling_ii/fibo_output.png",
+                    "fileImage": "./assets/filehandling_ii/fibo_output.png"
+                },
+                {
+                    "title": "Write a program using user-defined function to check whether the given number is palindrome or not. aashraya pokharel",
+                    "code": "#include <stdio.h>\n\nint isPalindrome(int num) {\n    int originalNum, reversedNum = 0, remainder;\n    originalNum = num;\n    while (num != 0) {\n        remainder = num % 10;\n        reversedNum = reversedNum * 10 + remainder;\n        num /= 10;\n    }\n    if (originalNum == reversedNum) {\n        return 1; \n    } else {\n        return 0; \n    }\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    if (isPalindrome(number)) {\n        printf(\"%d is a palindrome.\n\", number);\n    } else {\n        printf(\"%d is not a palindrome.\n\", number);\n    }\n    return 0;\n}",
+                    "outputImage": "./assets/cprogramming/palindrome.png",
+                    "fileImage": ""
+                },
+                              {
+                    "title": "What are the alphabets or character set of C programming language? What are C-Tokens? List and define different C-Tokens with examples. Aaryan Shah 709",
+                    "code": "See the attached photo",
+                    "outputImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png",
+                    "fileImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png"
                 }
             ]
         }
