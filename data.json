@@ -4,12 +4,7 @@
             "name": "C programming",
             "snippets": [
                 {
-                    "title": "What is the difference between the = symbol and == symbol? What is the modulus operator? (By- Aadarsha Kafle 703)",
-                    "code": "1. = (Assignment Operator):\n\n   a. The = symbol in C is known as the assignment operator. It is used to assign a value to a variable.\n\n   b. When you use =, you are telling the program to store the value on the right-hand side of the operator into the variable on the left-hand side.\n\n   c. This operator is essential for assigning values to variables during the program's execution.\n\n2. == (Equality Comparison Operator):\n\n   a. The == symbol in C is known as the equality comparison operator. It is used to compare two values to check if they are equal.\n\n   b. The == operator evaluates to true (1) if the values on both sides are equal and false (0) if they are not equal.\n\n   c. This operator is commonly used in conditional statements, such as if conditions, to check whether two values are identical.\n\nThe modulus operator (%) in C is used to find the remainder of a division operation. It divides the number on the left-hand side by the number on the right-hand side and returns the remainder. This operator is useful for tasks like checking if a number is even or odd. For example, x % 2 == 0 checks if x is even. It is commonly used in loops and conditions for cyclic operations.",
-                    "outputImage": "",
-                    "fileImage": ""
-                },
-                {
+                   
                     "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
                     "code": "This question does not require code to be written. View the output!",
                     "outputImage": "./assets/filehandling_ii/answer.PNG",
@@ -135,6 +130,12 @@
                     "code": "#include <stdio.h>\n\nint isPalindrome(int num) {\n    int originalNum, reversedNum = 0, remainder;\n    originalNum = num;\n    while (num != 0) {\n        remainder = num % 10;\n        reversedNum = reversedNum * 10 + remainder;\n        num /= 10;\n    }\n    if (originalNum == reversedNum) {\n        return 1; \n    } else {\n        return 0; \n    }\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    if (isPalindrome(number)) {\n        printf(\"%d is a palindrome.\n\", number);\n    } else {\n        printf(\"%d is not a palindrome.\n\", number);\n    }\n    return 0;\n}",
                     "outputImage": "./assets/cprogramming/palindrome.png",
                     "fileImage": ""
+                },
+                              {
+                    "title": "What are the alphabets or character set of C programming language? What are C-Tokens? List and define different C-Tokens with examples. Aaryan Shah 709",
+                    "code": "See the attached photo",
+                    "outputImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png",
+                    "fileImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png"
                 }
             ]
         }
