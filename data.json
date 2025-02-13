@@ -96,6 +96,13 @@
                     "fileImage": ""
                 },
                 {
+
+                    "title":"Write a program using user-defined function to check whether the given number is odd or even.",
+                    "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
+                    "outputImage":"./assets/aavash_output.png",
+                    "fileImage":"",
+                },
+              {
                     "title": "Write a C program to remove a file.(Dibyam Acharya)",
                     "code": "#include <stdio.h>\nint main() {\n    FILE * fp;\n    fp=fopen(\"Shrek.txt\",\"w\");\n    if(fp==NULL)\n    {\n        printf(\"Error in opening file\n\");\n    }\n    else\n    {\n        fclose(fp);\n        remove(\"Shrek.txt\");\n        printf(\"The file was successfully removed\");\n    }\n    return 0;\n}",
                     "outputImage": "./assets/48_Output.png",
