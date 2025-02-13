@@ -7,8 +7,8 @@
                    
                     "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
                     "code": "This question does not require code to be written. View the output!",
-                    "outputImage": "./assets/filehandling_ii/answer.PNG",
-                    "fileImage": "./assets/filehandling_ii/answer.PNG"
+                    "outputImage": "./assets/filehandling_ii/answer.png",
+                    "fileImage": "./assets/filehandling_ii/answer.png"
                 },
                 {
                     "title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
@@ -99,7 +99,7 @@
 
                     "title":"Write a program using user-defined function to check whether the given number is odd or even.",
                     "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
-                    "outputImage":"./assets/aavash_output.png",
+                    "outputImage":".assets/filehandling_ii/aavash outptut.png",
                     "fileImage":"",
                 },
               {
