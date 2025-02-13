@@ -4,7 +4,6 @@
             "name": "C programming",
             "snippets": [
                 {
-                   
                     "title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
                     "code": "This question does not require code to be written. View the output!",
                     "outputImage": "./assets/filehandling_ii/answer.png",
@@ -66,6 +65,12 @@
                     "fileImage": ""
                 },
                 {
+                    "title": "What are the different types of control structures in programming",
+                    "code": "Sequential Control\n#include <stdio.h>\n\nint main() {\n    // Sequential Execution\n    printf(\"Hello\n\");\n    printf(\"World\n\");\n    return 0;\n}\n\nSelection Control\nIf Statement\n#include <stdio.h>\nint main() {\n    // If Statement\n    int age = 18;\n    if (age >= 18) {\n        printf(\"You are an adult.\n\");\n    }\n    return 0;\n}\n\nIf-Else Statement\n#include <stdio.h>\nint main() {\n    // If-Else Statement\n    int age = 16;\n    if (age >= 18) {\n        printf(\"You are an adult.\n\");\n    } else {\n        printf(\"You are a minor.\n\");\n    }\n    return 0;\n}\n\nRepetition Control (Loops)\nFor Loop\n#include <stdio.h>\nint main() {\n    // For Loop\n    for (int i = 0; i < 5; i++) {\n        printf(\"Iteration %d\n\", i + 1);\n    }\n    return 0;\n}\n\nWhile Loop\n#include <stdio.h>\n\nint main() {\n    // While Loop\n    int count = 0;\n    while (count < 5) {\n        printf(\"Count is %d\n\", count);\n        count++;\n    }\n    return 0;\n}\n\nJump Control\n#include <stdio.h>\nint main() {\n    // Break Statement\n    for (int i = 0; i < 10; i++) {\n        if (i == 5) {\n            break;  // Exit the loop when i is 5\n        }\n        printf(\"%d\n\", i);\n    }\n    return 0;\n}\n\nContinue\n#include <stdio.h>\nint main() {\n    // Continue Statement\n    for (int i = 0; i < 5; i++) {\n        if (i == 2) {\n            continue;  // Skip the rest of the loop when i is 2\n        }\n        printf(\"%d\n\", i);\n    }\n    return 0;\n}",
+                    "outputImage": "./assets/1.png",
+                    "fileImage": "./assets/2.png"
+                },
+                {
                     "title": "Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
                     "code": "#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
                     "outputImage": "./assets/filehandling_ii/question15.PNG",
@@ -96,13 +101,12 @@
                     "fileImage": ""
                 },
                 {
-
-                    "title":"Write a program using user-defined function to check whether the given number is odd or even.",
-                    "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
-                    "outputImage":".assets/filehandling_ii/aavash outptut.png",
-                    "fileImage":"",
+                    "title": "Write a program using user-defined function to check whether the given number is odd or even.",
+                    "code": "#include <stdio.h>\n\nvoid checkEvenOdd(int number) {\n    if (number % 2 == 0) {\n        printf(\"The number %d is Even.\n\", number);\n    } else {\n        printf(\"The number %d is Odd.\n\", number);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &num);\n    checkEvenOdd(num);\n    return 0;\n}",
+                    "outputImage": ".assets/filehandling_ii/aavash outptut.png",
+                    "fileImage": ""
                 },
-              {
+                {
                     "title": "Write a C program to remove a file.(Dibyam Acharya)",
                     "code": "#include <stdio.h>\nint main() {\n    FILE * fp;\n    fp=fopen(\"Shrek.txt\",\"w\");\n    if(fp==NULL)\n    {\n        printf(\"Error in opening file\n\");\n    }\n    else\n    {\n        fclose(fp);\n        remove(\"Shrek.txt\");\n        printf(\"The file was successfully removed\");\n    }\n    return 0;\n}",
                     "outputImage": "./assets/48_Output.png",
@@ -138,7 +142,7 @@
                     "outputImage": "./assets/cprogramming/palindrome.png",
                     "fileImage": ""
                 },
-                              {
+                {
                     "title": "What are the alphabets or character set of C programming language? What are C-Tokens? List and define different C-Tokens with examples. Aaryan Shah 709",
                     "code": "See the attached photo",
                     "outputImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png",
