@@ -123,7 +123,13 @@
           "code": "String handling functions are essential for working with strings in programming as they encompass broad types of operations to manipulate, search, and modify string data. On the basis of the type of operation, string handling functions have been categorized as follows:\n\n1. Length Functions: These provide the measure of the size of a string. The number of characters, excluding the null terminator, is determined by `strlen()`, while `sizeof()` gives the total size of a string, counting the null terminator, in the language, such as C.\n\n2. Character Search Functions: These are functions that search a string for a character. The functions `strchr()` find the first occurrence of a character, `strrchr()` finds the last occurrence, and `strstr()` searches a string for another substring.\n\n3. String Manipulation Functions: Functions that perform operations on strings. For example, `strcat()`, which is used to concatenate two strings, and `strncat()`, used to append a given number of characters from one string to another.\n\n4. String Comparison Functions: These compare two strings. For instance, the `strcmp()` function compares two strings in dictionary order (in alphabetical order), while `strncmp()` compares a specified number of characters of both strings.\n\n5. String Copy Functions: In order to copy one string into another, one needs the help of these functions. For example, `strcpy()` copies an entire string, since `strncpy()` copies just a specific number of characters from one string to the other, which also helps in circumventing buffer overflow.\n\nThese string handling functions are critical for string searching, modification, and comparison, enabling the effective manipulation of strings in programming.",
           "outputImage":"",
           "fileImage":""
-        }
+        },
+        {
+                    "title":"Write a program using user-defined function to check whether the given number is palindrome or not. aashraya pokharel",
+                    "code":"#include <stdio.h>\n\nint isPalindrome(int num) {\n    int originalNum, reversedNum = 0, remainder;\n    originalNum = num;\n    while (num != 0) {\n        remainder = num % 10;\n        reversedNum = reversedNum * 10 + remainder;\n        num /= 10;\n    }\n    if (originalNum == reversedNum) {\n        return 1; \n    } else {\n        return 0; \n    }\n}\n\nint main() {\n    int number;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &number);\n    if (isPalindrome(number)) {\n        printf(\"%d is a palindrome.\\n\", number);\n    } else {\n        printf(\"%d is not a palindrome.\\n\", number);\n    }\n    return 0;\n}",
+                    "outputImage":"./assets/cprogramming/palindrome.png",
+                    "fileImage":""
+                }
       ]
     }
   ]
