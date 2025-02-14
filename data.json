@@ -71,6 +71,12 @@
                     "fileImage": "./assets/2.png"
                 },
                 {
+                    "title":"What is recursion in c? Write a program to find the factorial of a number using recursion.",
+                    "code":"#include <stdio.h>\nint factorial(int a);\nint main(){\n    int x;\n    printf(\"Enter the value of N: \");\n    scanf(\"%d\",&x);\n    int result = factorial(x);\n    printf(\"%d\",result);\n    return 0;\n}\n\nint factorial(int a){\n    if(a==1 || a==0){\n        return 1;\n    }\n    else{\n        return (a * factorial(a-1));\n    }\n}",
+                    "outputImage":"./assets/factorial-output.png",
+                    "fileImage": ""
+                },
+              {
                     "title": "Write a program using user-defined function to find the greatest among 3 numbers. by aayush bhandari 715",
                     "code": "#include<stdio.h>\n\nint great(int a, int b, int c);\n\nvoid main()\n{\n    int i, j, k;\n    printf(\"enter three different numbers \n\");\n    scanf(\"%d %d %d\", &i, &j, &k);\n    if(i == j || j == k || i == k)\n    {\n        main();\n    }\n    great(i, j, k);\n}\n\nint great(int a, int b, int c)\n{\n    if (a > b && a > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", a);\n    }\n    if (b > a && b > c)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", b);\n    }\n    if (c > b && c > a)\n    {\n        printf(\"%d is the greatest number amongst the three numbers\", c);\n    }\n}",
                     "outputImage": "./assets/filehandling_ii/question15.PNG",
@@ -143,11 +149,17 @@
                     "fileImage": ""
                 },
                 {
-                    "title": "Write a program using structure to accept details of 5 employees, count how many have salary between 25000-30000, and display records.",
+                    "title": "Write a program using structure to accept details of 5 employees, count how many have salary between 25000-30000, and display records. (Bikrant Lekhak)",
                     "code": "#include <stdio.h>\n\n#define MAX_EMPLOYEES 5\n\n// Structure to store employee details\nstruct Employee {\n    int id;\n    char name[50];\n    int age;\n    char address[100];\n    float salary;\n};\n\nint main() {\n    struct Employee employees[MAX_EMPLOYEES];\n    int count = 0;\n\n    // Accepting details of 5 employees\n    printf(\"Enter details of %d employees:\\n\", MAX_EMPLOYEES);\n    for (int i = 0; i < MAX_EMPLOYEES; i++) {\n        printf(\"\\nEmployee %d:\\n\", i + 1);\n        printf(\"ID: \");\n        scanf(\"%d\", &employees[i].id);\n        printf(\"Name: \");\n        scanf(\" %[^\n]\", employees[i].name);  // Accept full name with spaces\n        printf(\"Age: \");\n        scanf(\"%d\", &employees[i].age);\n        printf(\"Address: \");\n        scanf(\" %[^\n]\", employees[i].address);\n        printf(\"Salary: \");\n        scanf(\"%f\", &employees[i].salary);\n\n        // Count employees with salary between 25000 and 30000\n        if (employees[i].salary >= 25000 && employees[i].salary <= 30000) {\n            count++;\n        }\n    }\n\n    // Displaying details of all employees\n    printf(\"\\nEmployee Records:\\n\");\n    printf(\"-----------------------------------------------------------\\n\");\n    printf(\"ID\\tName\\t\\tAge\\tAddress\\t\\tSalary\\n\");\n    printf(\"-----------------------------------------------------------\\n\");\n    for (int i = 0; i < MAX_EMPLOYEES; i++) {\n        printf(\"%d\\t%s\\t%d\\t%s\\t%.2f\\n\",\n               employees[i].id, employees[i].name, employees[i].age,\n               employees[i].address, employees[i].salary);\n    }\n\n    // Display count of employees in salary range 25000-30000\n    printf(\"\\nTotal employees with salary between 25000 and 30000: %d\\n\", count);\n\n    // Signature line\n    printf(\"\\nDone by Bikrant Lekhak\\n\");\n\n    return 0;\n}",
                     "outputImage": "./assets/filehandling_ii/question_no_37_by_bikrantlekhak.png"
                 },
                 {
+                    "title":"What is dereferencing operator? Write a program to swap two numbers using pointer. (Binayak)", 
+                    "code":"The dereferencing operator is * in C/C++. It is used to access the value at the address the pointer is pointing to. When you dereference a pointer, you get the value stored at the memory address that the pointer holds.\n\nTo swap two numbers using pointers, you'll need to:\n\n1. Declare two integer variables.\n2. Use pointers to hold their addresses.\n3. Dereference the pointers to access and swap the values.\n#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n    int temp = *a;  // Dereference the pointer to get the value\n    *a = *b;        // Dereference and assign the value of b to a\n    *b = temp;      // Assign the temp value to b\n}\n\nint main() {\n    int x, y;\n\n    // Input the values\n    printf(\"Enter two numbers: \");\n    scanf(\"%d %d\", &x, &y);\n\n    // Swap using pointers\n    swap(&x, &y);\n\n    // Output the swapped values\n    printf(\"After swapping: x = %d, y = %d\\n\", x, y);\n\n    return 0;\n}",
+                    "outpuImage":"",
+                    "fileImage":""
+                },
+              {
                     "title": "What are the alphabets or character set of C programming language? What are C-Tokens? List and define different C-Tokens with examples. Aaryan Shah 709",
                     "code": "See the attached photo",
                     "outputImage": "./assets/filehandling_ii/question_no_9_by_aaryan_shah.png",
