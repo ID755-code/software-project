@@ -168,8 +168,8 @@
                 {
                     "title": "Explain Virtual Reality and its tyoes with its advantages and disadvantages. Abiral Kharel(755)",
                     "code": "See the attached photo",
-                    "outputImage": "./assets/filehandling_ii/VR1.png", "./assets/filehandling_ii/VR2.png",
-                    "fileImage": "./assets/filehandling_ii/VR1.png", "./assets/filehandling_ii/VR2.png"
+                    "outputImage": "./assets/filehandling_ii/VR1.png", 
+                    "fileImage": "./assets/filehandling_ii/VR1.png" 
                 }
             ]
         }
