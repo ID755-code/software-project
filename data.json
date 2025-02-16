@@ -22,6 +22,20 @@
 					"fileImage": "./assets/filehandling_ii/41_fileimage.png"
 				},
 				{
+					"title": "What are data-types in c? Write the range of each data-types in c and how much memory does it consume? -Aadarsha Bhatta 702",
+					"code": "This question does not require code to be written. View the output!",
+					"outputImage": "./assets/filehandling_ii/Q2.png",
+					"fileImage": "./assets/filehandling_ii/Q2.png"
+				},
+
+				{
+					"title": "How do you construct an increment or decrement statement in C? What is variable initialization and why is it important? -Aadarsha Bhatta 702",
+					"code": "This question does not require code to be written. View the output!",
+					"outputImage": "./assets/filehandling_ii/Q58.png",
+					"fileImage": "./assets/filehandling_ii/Q58.png"
+				},
+
+				{
 					"title": "Write a C program to append content to an existing file. Dikshyanta Karki (749)",
 					"code": "#include <stdio.h>\n\nint main() {\n    FILE *file;\n    char content[] = \"This is the appended content.\";\n    file = fopen(\"existing.txt\", \"a\");\n    if (file == NULL) {\n        printf(\"Error opening file for appending.\");\n        return 1;\n    }\n    fprintf(file, \"%s\", content);\n    fclose(file);\n    return 0;\n}",
 					"outputImage": "./assets/filehandling_ii/49_output.png",
