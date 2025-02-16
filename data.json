@@ -168,7 +168,7 @@
 				{
 					"title": "Explain Virtual Reality and its tyoes with its advantages and disadvantages. Abiral Kharel(755)",
 					"code": "See the attached photo",
-					"outputImage": "./assets/filehandling_ii/VR1.png",
+					"outputImage": "./assets/VR1.png", "./assets/VR2.png",
 					"fileImage": "./assets/filehandling_ii/VR1.png"
 				}
 			]
@@ -177,10 +177,10 @@
 			"name": "Webtechnology",
 			"snippets": [
 				{
-					"title": "What is the use of var_dump function?",
+					"title": "What is the use of var_dump function? Abiral Kharel- 755",
 					"code": "",
-					"outputImage": "",
-					"fileImage": ""
+					"outputImage": "./assets/WebTech41-1.png", "./assets/WebTech41-2.png",
+					"fileImage": "./assets/WebTech41-1.png", "./assets/WebTech41-2.png"
 				}
 			]
 		}
