@@ -177,24 +177,31 @@
 			"name": "Webtechnology",
 			"snippets": [
 				{
+					"title": "Explain the datatypes in javascript. What is an undefined value in javascript? (Ambu shree)",
+					"code": "First part of the question:\nJavaScript is a dynamically typed language, meaning variables can hold values of any type without specifying the type explicitly. The data types in JavaScript are categorized into two main groups:\n\nPrimitive Data Types:\n\nString: Represents textual data. Example: \"Hello, World!\"\n\nNumber: Represents both integer and floating-point numbers. Example: 42, 3.14\n\nBoolean: Represents a logical entity with two values: true or false.\n\nUndefined: Represents a variable that has been declared but not assigned a value.\n\nNull: Represents the intentional absence of any object value. Example: null\n\nBigInt: Represents integers larger than the range supported by the Number type. Example: 9007199254740991n\n\nSymbol: Represents a unique and immutable value, often used as object property keys. Example: Symbol('description')\n\nNon-Primitive (Reference) Data Types:\n\nObject: Represents a collection of key-value pairs. Example: { name: \"Alice\", age: 25 }\n\nArray: Represents an ordered list of values. Example: [1, 2, 3]\n\nFunction: Represents a reusable block of code. Example: function add(a, b) { return a + b; }\n\nSECOND PART:\nIn JavaScript, undefined is a primitive value that represents a variable that has been declared but has not been assigned a value. It is also the default return value of functions that do not explicitly return anything.\n\nExamples of undefined:\nUninitialized Variable:\n\n```javascript\nlet x;\nconsole.log(x);\n```"",
+					"outputImage": "",
+					"fileImage": ""
+				},
+				
+				{
 					"title": "Write a program using javascript to check whether the given number is palindrome or not. (729, Anwesh S.)",
 					"code": "let a = parseInt(prompt(\"Enter a number:\")), sum = 0, b, z = a;\n\nwhile (a > 0) {\n  b = a % 10;\n  sum = sum * 10 + b;\n  a = parseInt(a / 10);\n}\n\nconsole.log(\"Reversed Number:\", sum);\n\nif (z === sum) { // you could do == but === confirms if data type is same too. So yeah it's kinda better, but better do == in exam as some examiners might confuse it with a mistake. \n  console.log(\"Palindrome Number:\", sum);\n} else {\n  console.log(\"Not a Palindrome Number:\", sum);\n}",
 					"outputImage": "assets/Web-technology/Palindrome.png",
 					"fileImage": ""
-        },
-        {
-           "title": "What is the use of var_dump function? Abiral Kharel- 755",
-           "code": "",
-           "outputImage": "./assets/WebTech41-1.png",
-           "fileImage": "./assets/WebTech41-2.png"
-                },
-        {
+				},
+				{
+					"title": "What is the use of var_dump function? Abiral Kharel- 755",
+					"code": "",
+					"outputImage": "./assets/WebTech41-1.png",
+					"fileImage": "./assets/WebTech41-2.png"
+				},
+				{
 					"title": "What is === operator? What are all the looping structures in JavaScript? What would be the result of 3+2+”7″?(Dibyam Acharya)",
 					"code": "See the attached photo",
-					"outputImage": "./assets/Output0216_48.png",
-					"fileImage": "No file for this question."
-        },
-        {
+					"outputImage": "./assets/Output0216_48.PNG",
+					"fileImage": ""
+				},
+				{
 					"title": "What are javascript events? List some of the javascript events and write a complete Html code with javascript to illustrate javascript events.",
 					"code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>JavaScript Events Example</title>\n    <style>\n        #message {\n            font-size: 20px;\n            margin: 20px;\n            color: #2c3e50;\n        }\n        #box {\n            width: 200px;\n            height: 200px;\n            background-color: lightblue;\n            margin: 20px;\n        }\n    </style>\n</head>\n<body>\n    <h2>JavaScript Events Example</h2>\n\n    <button id=\"clickButton\">Click Me!</button>\n    <div id=\"box\"></div>\n\n    <input type=\"text\" id=\"focusInput\" placeholder=\"Focus on me!\" />\n    <form id=\"myForm\">\n        <input type=\"text\" id=\"name\" placeholder=\"Enter your name\" />\n        <button type=\"submit\">Submit</button>\n    </form>\n\n    <div id=\"message\"></div>\n\n    <script>\n        // Click event\n        document.getElementById('clickButton').addEventListener('click', function() {\n            alert('Button was clicked!');\n        });\n\n        // Mouseover event\n        document.getElementById('box').addEventListener('mouseover', function() {\n            document.getElementById('message').innerText = 'You are hovering over the box!';\n        });\n\n        // Mouseout event\n        document.getElementById('box').addEventListener('mouseout', function() {\n            document.getElementById('message').innerText = ''; \n        });\n\n        // Focus event\n        document.getElementById('focusInput').addEventListener('focus', function() {\n            document.getElementById('message').innerText = 'Input field is focused!';\n        });\n\n        // Blur event\n        document.getElementById('focusInput').addEventListener('blur', function() {\n            document.getElementById('message').innerText = 'Input field lost focus!';\n        });\n\n        // Submit event\n        document.getElementById('myForm').addEventListener('submit', function(event) {\n            event.preventDefault(); // Prevent form submission for demo\n            const name = document.getElementById('name').value;\n            document.getElementById('message').innerText = 'Form submitted! Hello, ' + name + '!';\n        });\n    </script>\n</body>\n</html>",
 					"outputImage": "assets/filehandling_ii/8_web.png",
