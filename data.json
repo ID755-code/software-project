@@ -177,8 +177,8 @@
 			"name": "Webtechnology",
 			"snippets": [
 				{
-					"title": "",
-					"code": "",
+					"title": "Write a program using javascript to check whether the given number is palindrome or not. (729, Anwesh S.)",
+					"code": "let a = parseInt(prompt(\"Enter a number:\")), sum = 0, b, z = a;\n\nwhile (a > 0) {\n  b = a % 10;\n  sum = sum * 10 + b;\n  a = parseInt(a / 10);\n}\n\nconsole.log(\"Reversed Number:\", sum);\n\nif (z === sum) { // you could do == but === confirms if data type is same too. So yeah it's kinda better, but better do == in exam as some examiners might confuse it with a mistake. \n  console.log(\"Palindrome Number:\", sum);\n} else {\n  console.log(\"Not a Palindrome Number:\", sum);\n}",
 					"outputImage": "",
 					"fileImage": ""
 				}
