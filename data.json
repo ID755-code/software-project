@@ -39,5 +39,16 @@
                 }
             ]
         }
+        {
+            "name": "Web Technology",
+            "snippets":[
+                {
+                    "title": "Write a JS program to find the largest number among three numbers. (Pratik GC)",
+                    "code":"<script>\nfunction findLargest(a, b, c) {\n    if (a >= b && a >= c) {\n        console.log(a + \" is the largest number.\");\n    } else if (b >= a && b >= c) {\n        console.log(b + \" is the largest number.\");\n    } else {\n        console.log(c + \" is the largest number.\");\n    }\n}\n\n// Example usage\nfindLargest(10, 25, 15);\n</script>\n\n<pre id=\"codeBlock\"></pre>",
+                    "outputImage": "./assets/web.PNG",
+                    "fileImage": ""
+                }
+            ]
+        }
     ]
 }
