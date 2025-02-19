@@ -288,10 +288,10 @@
 			"name": "Data Communication and Networking",
 			"snippets": [
 				{
-					"title": "",
+					"title": "Describe the bus and star topology with suitable diagram.",
 					"code": "",
-					"outputImage": "",
-					"fileImage": ""
+					"outputImage": "./assets/Starbus1.png",
+					"fileImage": "./assets/StarBus2.png"
 				}
 			]
 		}
