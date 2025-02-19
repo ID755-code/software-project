@@ -11,7 +11,7 @@
 				},
 				{
 					"title": "Write a program to store information of n number of students having fields id, name, address, age in a file named student.dat file and finally read from a file and display the records. (Darshan Subedi",
-					"code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Student {\n    int id;\n    char name[50];\n    char address[100];\n    int age;\n};\n\nint main() {\n    int n;\n    printf(\"Enter the number of students: \");\n    scanf(\"%d\", &n);\n    \n    FILE *file = fopen(\"student.dat\", \"wb\");\n    if (file == NULL) {\n        printf(\"Error opening file!\\n\");\n        exit(1);\n    }\n    \n    struct Student s;\n    for (int i = 0; i < n; i++) {\n        printf(\"Enter details for student %d:\\n\", i + 1);\n        printf(\"ID: \");\n        scanf(\"%d\", &s.id);\n        printf(\"Name: \");\n        scanf(\" %[^\"]s\", s.name);\n        printf(\"Address: \");\n        scanf(\" %[^\"]s\", s.address);\n        printf(\"Age: \");\n        scanf(\"%d\", &s.age);\n        fwrite(&s, sizeof(struct Student), 1, file);\n    }\n    fclose(file);\n    \n    file = fopen(\"student.dat\", \"rb\");\n    if (file == NULL) {\n        printf(\"Error opening file!\\n\");\n        exit(1);\n    }\n    \n    printf(\"\\nStudent Records:\\n\");\n    while (fread(&s, sizeof(struct Student), 1, file)) {\n        printf(\"ID: %d\\n\", s.id);\n        printf(\"Name: %s\\n\", s.name);\n        printf(\"Address: %s\\n\", s.address);\n        printf(\"Age: %d\\n\", s.age);\n        printf(\"-----------------------------\\n\");\n    }\n    fclose(file);\n    \n    return 0;\n}",
+					"code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Student {\n    int id;\n    char name[50];\n    char address[100];\n    int age;\n};\n\nint main() {\n    int n;\n    printf(\"Enter the number of students: \");\n    scanf(\"%d\", &n);\n    \n    FILE *file = fopen(\"student.dat\", \"wb\");\n    if (file == NULL) {\n        printf(\"Error opening file!\n\");\n        exit(1);\n    }\n    \n    struct Student s;\n    for (int i = 0; i < n; i++) {\n        printf(\"Enter details for student %d:\n\", i + 1);\n        printf(\"ID: \");\n        scanf(\"%d\", &s.id);\n        printf(\"Name: \");\n        scanf(\" %[^\"]s\", s.name);\n        printf(\"Address: \");\n        scanf(\" %[^\"]s\", s.address);\n        printf(\"Age: \");\n        scanf(\"%d\", &s.age);\n        fwrite(&s, sizeof(struct Student), 1, file);\n    }\n    fclose(file);\n    \n    file = fopen(\"student.dat\", \"rb\");\n    if (file == NULL) {\n        printf(\"Error opening file!\n\");\n        exit(1);\n    }\n    \n    printf(\"\nStudent Records:\n\");\n    while (fread(&s, sizeof(struct Student), 1, file)) {\n        printf(\"ID: %d\n\", s.id);\n        printf(\"Name: %s\n\", s.name);\n        printf(\"Address: %s\n\", s.address);\n        printf(\"Age: %d\n\", s.age);\n        printf(\"-----------------------------\n\");\n    }\n    fclose(file);\n    \n    return 0;\n}",
 					"outputImage": "./assets/cprogramming/structresult.PNG",
 					"fileImage": "./assets/cprogramming/structfile.PNG"
 				},
@@ -33,14 +33,12 @@
 					"outputImage": "./assets/filehandling_ii/Q2.png",
 					"fileImage": "./assets/filehandling_ii/Q2.png"
 				},
-
 				{
 					"title": "How do you construct an increment or decrement statement in C? What is variable initialization and why is it important? -Aadarsha Bhatta 702",
 					"code": "This question does not require code to be written. View the output!",
 					"outputImage": "./assets/filehandling_ii/Q58.png",
 					"fileImage": "./assets/filehandling_ii/Q58.png"
 				},
-
 				{
 					"title": "Write a C program to append content to an existing file. Dikshyanta Karki (749)",
 					"code": "#include <stdio.h>\n\nint main() {\n    FILE *file;\n    char content[] = \"This is the appended content.\";\n    file = fopen(\"existing.txt\", \"a\");\n    if (file == NULL) {\n        printf(\"Error opening file for appending.\");\n        return 1;\n    }\n    fprintf(file, \"%s\", content);\n    fclose(file);\n    return 0;\n}",
@@ -190,19 +188,70 @@
 					"code": "See the attached photo",
 					"outputImage": "./assets/VR1.png",
 					"fileImage": "./assets/filehandling_ii/VR1.png"
+				},
+				{
+					"title": "30. Write down the differences between call by value and call by reference.-Aryan Thapaliya",
+					"code": "This question doesnot require code to be written. View the output!",
+					"outputImage": "./assets/filehandling_ii/answer.PNG",
+					"fileImage": "./assets/filehandling_ii/answer.PNG"
+				},
+				{
+					"title": "Write a C program to sort the elements of an array in descending order. (Binam Adhikari)",
+					"code": "#include <stdio.h>\n\nvoid sortDescending(int arr[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (arr[i] < arr[j]) {\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int arr[] = {64, 34, 25, 12, 22, 11, 90};\n    int n = sizeof(arr) / sizeof(arr[0]);\n\n    sortDescending(arr, n);\n\n    printf(\"Sorted array in descending order: \n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\n\");\n\n    return 0;\n}",
+					"outputImage": "./assets/53.png",
+					"fileImage": ""
+				},
+				{
+					"title": "Write a C program to append content to an existing file. Dikshyanta Karki (749)",
+					"code": "#include <stdio.h>\n\nint main() {\n    FILE *file;\n    char content[] = \"This is the appended content.\";\n    file = fopen(\"existing.txt\", \"a\");\n    if (file == NULL) {\n        printf(\"Error opening file for appending.\");\n        return 1;\n    }\n    fprintf(file, \"%s\", content);\n    fclose(file);\n    return 0;\n}",
+					"outputImage": "./assets/filehandling_ii/49_output.png",
+					"fileImage": "./assets/filehandling_ii/49_output2.png"
+				},
+				{
+					"title": "Write a C program to calculate the sum of n natural numbers. Ambu shree",
+					"code": "//Write a program using user-defined function to find the sum of N natural numbers.\n//DONE BY AMBU SHREE POUDEL (723)\n#include <stdio.h>\n\nint main() {\n    int n, sum;\n\n    // Input the value of n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    sum = n * (n + 1) / 2;\n\n    printf(\"Sum of first %d natural numbers is: %d\n\", n, sum);\n\n    return 0;\n}",
+					"outputImage": "./assets/filehandling_ii/sumof_n_natural_number.png",
+					"fileImage": ""
+				},
+				{
+					"title": "What are unary and ternary operators? Explain all the types of operators in brief. (Abiral Kharel)",
+					"code": "Unary operators are those operators which require only one operand to execute their respective operations. In C-Programming Language, unary operators include ++, --, and sizeof(). \n\n++ operator:\nThis operator, also known as the increment operator, is used to increase a number or any other numerical value by 1. This operator can be used in two types of ways, pre or post. Pre-increment operator is the usage of this operator in which the operator is put in front of the operand (++a), whereas, post-increment operator is used by putting the operator after the operand(a++). \n\n-- operator:\nSimilar to the increment operator, the decrement operator is used to decrease a numerical value by 1. This operator is also used in two ways, pre and post. The pre usage is the one in which the operator is put in front of the operand(--a) and post-decrement operator is the one in which the operator is put behind the operand for the operation(a--). \n\nIn C, the pre-increment operator (++i) is used when we want to increase the value of a variable before using it in an expression. On the other hand, the post-increment operator (i++) is used when we want to increase the value of a variable after using it in an expression.\n\nTernary operators are those types of operators which require three operands to execute their function. They are also called conditional operators. ‘?:’ is the only ternary operator used in C.\n\n?: operator:\nWhenever a program executes conditionally according to a particular statement, then we use conditional operators. Let us consider an example. Suppose Expression1 is the condition to be evaluated. If the condition(Expression1) is true then it will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then it will execute and return the result of Expression3.\n\nExample:\nCondition ? True : False\nmax = num1 > num2 ? num1 : num2;\n\nBinary operators are those types of operators which require two operands to function/ execute their operations. Binary operators include +, -, *, /, %, &&, || etc. It is the most commonly used type of operator in the C-Language. Its types include Arithmetic Operators(+, -, *, /), Logical Operators(||, &&, !=, ==), Assignment Operators(=, +=, -=), Relational Operators(<, >, <=, >=), etc.",
+					"outputImage": "",
+					"fileImage": ""
+				},
+				{
+					"title": "What is debugging? What does the && operator do in a program code? (Aarshu shakya)",
+					"code": "Debugging is the process of identifying, isolating, and fixing bugs or errors in a program's code. It involves tracking down issues that prevent the program from working as expected, whether those issues are logic errors, syntax errors, or runtime errors. The goal is to ensure the code functions correctly and efficiently. Debugging can be done manually by reviewing the code, or by using debugging tools that help trace execution, inspect variable values, and pinpoint problem areas.\nAs for the && operator, it's a logical AND operator used in many programming languages (such as C, C++, Java, JavaScript, Python, etc.). It evaluates two conditions and returns true only if both conditions are true. If either condition is false, the whole expression returns false. The exampe of its code is given below.",
+					"outputImage": "./assets/Example.png"
+				},
+				{
+					"title": "What is the purpose of printf() and scanf() in C Program? What is \\0 character? (Aarshu Shakya)",
+					"code": "In C programming, printf() and scanf() are used for taking standard input and output functions. These functions are declared in the <stdio.h> library. The printf() function is used to display output on the screen. The function allows formatted output using format specifiers such as %d for integers, %f for floating-point numbers, and %s for strings. For example, printf(\"Age: %d\", age); prints the value of age as an integer and printf(\"Salary: %f\", salary) prints the value of float.\nOn the other hand, scanf() is used to take user input from the keyboard, storing the entered value in a variable. It requires the address-of (&) operator to correctly store input in variables, such as scanf(\"%d\", &num);, which reads an integer input from the user.\nAdditionally, the null character (\\0) plays a crucial role in C strings, marking the end of a string. In C, strings are stored as character arrays and always end with \\0 to indicate their termination. For example, the string \"Hello\" is stored internally as {'H', 'e', 'l', 'l', 'o', '\\0'}. The null character ensures functions like printf(\"%s\", str); correctly print the string by stopping at \\0. Without it, functions may read beyond the intended string, leading to unexpected behavior. These fundamental concepts are essential for handling input, output, and strings in C programming.",
+					"outputImage": "./assets/filehandling_ii/purpose_code.png"
+				},
+				{
+					"title": "Write a program to read and write from a file using getw() and putw() function. Pratik GC(744)",
+					"code": "#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\n    FILE *fp;\n    int a;\n    fp=fopen(\"D:/doingright.txt\",\"w\");\n    printf(\"enter the number to input in the file\");\n    scanf(\"%d\",&a);\n    putw(a,fp);\n    fclose(fp);\n    fp=fopen(\"D:/doingright.txt\",\"r\");\n    int n=getw(fp);\n    printf(\"The integer read from file is %d\",n);\n    fclose(fp);\n}",
+					"outpuImage": "/assets/image7.png",
+					"fileImage": ""
 				}
 			]
 		},
 		{
-			"name": "Webtechnology",
+			"name": "Web Technology",
 			"snippets": [
+				{
+					"title": "Write a JS program to find the largest number among three numbers. (Pratik GC)",
+					"code": "<script>\nfunction findLargest(a, b, c) {\n    if (a >= b && a >= c) {\n        console.log(a + \" is the largest number.\");\n    } else if (b >= a && b >= c) {\n        console.log(b + \" is the largest number.\");\n    } else {\n        console.log(c + \" is the largest number.\");\n    }\n}\n\n// Example usage\nfindLargest(10, 25, 15);\n</script>\n\n<pre id=\"codeBlock\"></pre>",
+					"outputImage": "./assets/web.png",
+					"fileImage": ""
+				},
 				{
 					"title": "Explain the datatypes in javascript. What is an undefined value in javascript? (Ambu shree)",
 					"code": "First part of the question:\nJavaScript is a dynamically typed language, meaning variables can hold values of any type without specifying the type explicitly. The data types in JavaScript are categorized into two main groups:\n\nPrimitive Data Types:\n\nString: Represents textual data. Example: \"Hello, World!\"\n\nNumber: Represents both integer and floating-point numbers. Example: 42, 3.14\n\nBoolean: Represents a logical entity with two values: true or false.\n\nUndefined: Represents a variable that has been declared but not assigned a value.\n\nNull: Represents the intentional absence of any object value. Example: null\n\nBigInt: Represents integers larger than the range supported by the Number type. Example: 9007199254740991n\n\nSymbol: Represents a unique and immutable value, often used as object property keys. Example: Symbol('description')\n\nNon-Primitive (Reference) Data Types:\n\nObject: Represents a collection of key-value pairs. Example: { name: \"Alice\", age: 25 }\n\nArray: Represents an ordered list of values. Example: [1, 2, 3]\n\nFunction: Represents a reusable block of code. Example: function add(a, b) { return a + b; }\n\nSECOND PART:\nIn JavaScript, undefined is a primitive value that represents a variable that has been declared but has not been assigned a value. It is also the default return value of functions that do not explicitly return anything.\n\nExamples of undefined:\nUninitialized Variable:\n\n```javascript\nlet x;\nconsole.log(x);\n```",
 					"outputImage": "",
 					"fileImage": ""
 				},
-				
 				{
 					"title": "Write a program using javascript to check whether the given number is palindrome or not. (729, Anwesh S.)",
 					"code": "let a = parseInt(prompt(\"Enter a number:\")), sum = 0, b, z = a;\n\nwhile (a > 0) {\n  b = a % 10;\n  sum = sum * 10 + b;\n  a = parseInt(a / 10);\n}\n\nconsole.log(\"Reversed Number:\", sum);\n\nif (z === sum) { // you could do == but === confirms if data type is same too. So yeah it's kinda better, but better do == in exam as some examiners might confuse it with a mistake. \n  console.log(\"Palindrome Number:\", sum);\n} else {\n  console.log(\"Not a Palindrome Number:\", sum);\n}",
@@ -226,6 +275,23 @@
 					"code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>JavaScript Events Example</title>\n    <style>\n        #message {\n            font-size: 20px;\n            margin: 20px;\n            color: #2c3e50;\n        }\n        #box {\n            width: 200px;\n            height: 200px;\n            background-color: lightblue;\n            margin: 20px;\n        }\n    </style>\n</head>\n<body>\n    <h2>JavaScript Events Example</h2>\n\n    <button id=\"clickButton\">Click Me!</button>\n    <div id=\"box\"></div>\n\n    <input type=\"text\" id=\"focusInput\" placeholder=\"Focus on me!\" />\n    <form id=\"myForm\">\n        <input type=\"text\" id=\"name\" placeholder=\"Enter your name\" />\n        <button type=\"submit\">Submit</button>\n    </form>\n\n    <div id=\"message\"></div>\n\n    <script>\n        // Click event\n        document.getElementById('clickButton').addEventListener('click', function() {\n            alert('Button was clicked!');\n        });\n\n        // Mouseover event\n        document.getElementById('box').addEventListener('mouseover', function() {\n            document.getElementById('message').innerText = 'You are hovering over the box!';\n        });\n\n        // Mouseout event\n        document.getElementById('box').addEventListener('mouseout', function() {\n            document.getElementById('message').innerText = ''; \n        });\n\n        // Focus event\n        document.getElementById('focusInput').addEventListener('focus', function() {\n            document.getElementById('message').innerText = 'Input field is focused!';\n        });\n\n        // Blur event\n        document.getElementById('focusInput').addEventListener('blur', function() {\n            document.getElementById('message').innerText = 'Input field lost focus!';\n        });\n\n        // Submit event\n        document.getElementById('myForm').addEventListener('submit', function(event) {\n            event.preventDefault(); // Prevent form submission for demo\n            const name = document.getElementById('name').value;\n            document.getElementById('message').innerText = 'Form submitted! Hello, ' + name + '!';\n        });\n    </script>\n</body>\n</html>",
 					"outputImage": "assets/filehandling_ii/8_web.png",
 					"fileImage": "assets/filehandling_ii/8_web_output.png"
+				},
+				{
+					"title": "Write a program using javascript to check whether the given number is Armstrong or not.",
+					"code": "let a = parseInt(prompt(\"Enter a number::\"));\nlet s = 0;\nlet temp = a;\n\nwhile (a != 0) {\n    let r = a % 10;\n    s = s + r * r * r;\n    a = Math.floor(a / 10);  // Use Math.floor to avoid floating point\n}\n\nif (temp === s) { \n    alert(\"The number is Armstrong\");\n} else {\n    alert(\"The number is not Armstrong\");\n}",
+					"outputImage": "assests/filehandling_ii/16output.png",
+					"fileImage": ""
+				}
+			]
+		},
+		{
+			"name": "Data Communication and Networking",
+			"snippets": [
+				{
+					"title": "",
+					"code": "",
+					"outputImage": "",
+					"fileImage": ""
 				}
 			]
 		}
