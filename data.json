@@ -228,6 +228,12 @@
 					"title": "What is the purpose of printf() and scanf() in C Program? What is \\0 character? (Aarshu Shakya)",
 					"code": "In C programming, printf() and scanf() are used for taking standard input and output functions. These functions are declared in the <stdio.h> library. The printf() function is used to display output on the screen. The function allows formatted output using format specifiers such as %d for integers, %f for floating-point numbers, and %s for strings. For example, printf(\"Age: %d\", age); prints the value of age as an integer and printf(\"Salary: %f\", salary) prints the value of float.\nOn the other hand, scanf() is used to take user input from the keyboard, storing the entered value in a variable. It requires the address-of (&) operator to correctly store input in variables, such as scanf(\"%d\", &num);, which reads an integer input from the user.\nAdditionally, the null character (\\0) plays a crucial role in C strings, marking the end of a string. In C, strings are stored as character arrays and always end with \\0 to indicate their termination. For example, the string \"Hello\" is stored internally as {'H', 'e', 'l', 'l', 'o', '\\0'}. The null character ensures functions like printf(\"%s\", str); correctly print the string by stopping at \\0. Without it, functions may read beyond the intended string, leading to unexpected behavior. These fundamental concepts are essential for handling input, output, and strings in C programming.",
 					"outputImage": "./assets/filehandling_ii/purpose_code.png"
+				},
+				{
+					"title": "Write a program to read and write from a file using getw() and putw() function. Pratik GC(744)",
+					"code": "#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\n    FILE *fp;\n    int a;\n    fp=fopen(\"D:/doingright.txt\",\"w\");\n    printf(\"enter the number to input in the file\");\n    scanf(\"%d\",&a);\n    putw(a,fp);\n    fclose(fp);\n    fp=fopen(\"D:/doingright.txt\",\"r\");\n    int n=getw(fp);\n    printf(\"The integer read from file is %d\",n);\n    fclose(fp);\n}",
+					"outpuImage": "./assets/image7.png",
+					"fileImage": ""
 				}
 			]
 		},
