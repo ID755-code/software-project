@@ -232,7 +232,7 @@
 				{
 					"title": "Write a program to read and write from a file using getw() and putw() function. Pratik GC(744)",
 					"code": "#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\n    FILE *fp;\n    int a;\n    fp=fopen(\"D:/doingright.txt\",\"w\");\n    printf(\"enter the number to input in the file\");\n    scanf(\"%d\",&a);\n    putw(a,fp);\n    fclose(fp);\n    fp=fopen(\"D:/doingright.txt\",\"r\");\n    int n=getw(fp);\n    printf(\"The integer read from file is %d\",n);\n    fclose(fp);\n}",
-					"outpuImage": "./assets/image7.png",
+					"outpuImage": "/assets/image7.png",
 					"fileImage": ""
 				}
 			]
