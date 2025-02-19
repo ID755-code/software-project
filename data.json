@@ -192,9 +192,15 @@
             ]
         },
         {
-            "name": "Webtechnology",
-            "snippets": [
+            "name": "Web Technology",
+            "snippets":[
                 {
+                    "title": "Write a JS program to find the largest number among three numbers. (Pratik GC)",
+                    "code":"<script>\nfunction findLargest(a, b, c) {\n    if (a >= b && a >= c) {\n        console.log(a + \" is the largest number.\");\n    } else if (b >= a && b >= c) {\n        console.log(b + \" is the largest number.\");\n    } else {\n        console.log(c + \" is the largest number.\");\n    }\n}\n\n// Example usage\nfindLargest(10, 25, 15);\n</script>\n\n<pre id=\"codeBlock\"></pre>",
+                    "outputImage": "./assets/web.PNG",
+                    "fileImage": ""
+                },
+              {
                     "title": "Explain the datatypes in javascript. What is an undefined value in javascript? (Ambu shree)",
                     "code": "First part of the question:\nJavaScript is a dynamically typed language, meaning variables can hold values of any type without specifying the type explicitly. The data types in JavaScript are categorized into two main groups:\n\nPrimitive Data Types:\n\nString: Represents textual data. Example: \"Hello, World!\"\n\nNumber: Represents both integer and floating-point numbers. Example: 42, 3.14\n\nBoolean: Represents a logical entity with two values: true or false.\n\nUndefined: Represents a variable that has been declared but not assigned a value.\n\nNull: Represents the intentional absence of any object value. Example: null\n\nBigInt: Represents integers larger than the range supported by the Number type. Example: 9007199254740991n\n\nSymbol: Represents a unique and immutable value, often used as object property keys. Example: Symbol('description')\n\nNon-Primitive (Reference) Data Types:\n\nObject: Represents a collection of key-value pairs. Example: { name: \"Alice\", age: 25 }\n\nArray: Represents an ordered list of values. Example: [1, 2, 3]\n\nFunction: Represents a reusable block of code. Example: function add(a, b) { return a + b; }\n\nSECOND PART:\nIn JavaScript, undefined is a primitive value that represents a variable that has been declared but has not been assigned a value. It is also the default return value of functions that do not explicitly return anything.\n\nExamples of undefined:\nUninitialized Variable:\n\n```javascript\nlet x;\nconsole.log(x);\n```",
                     "outputImage": "",
